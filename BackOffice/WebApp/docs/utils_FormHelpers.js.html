@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: utils/FormHelpers.js | Blueberry Dev Docs</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">Blueberry Dev Docs</a></h1>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CoreHelpers.html">CoreHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers.html#.BoolOpts">BoolOpts</a></li><li><a href="module-CoreHelpers.html#.camelCaseToWords">camelCaseToWords</a></li><li><a href="module-CoreHelpers.html#.FormatCurrency">FormatCurrency</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToQuery">GetAllFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToView">GetAllFieldsToView</a></li><li><a href="module-CoreHelpers.html#.GetInitLimitValue">GetInitLimitValue</a></li><li><a href="module-CoreHelpers.html#.GetInitOffsetValue">GetInitOffsetValue</a></li><li><a href="module-CoreHelpers.html#.GetInitSearchValue">GetInitSearchValue</a></li><li><a href="module-CoreHelpers.html#.GetLocalData">GetLocalData</a></li><li><a href="module-CoreHelpers.html#.GetQueryMeta">GetQueryMeta</a></li><li><a href="module-CoreHelpers.html#.isObject">isObject</a></li><li><a href="module-CoreHelpers.html#.isObjectEmpty">isObjectEmpty</a></li><li><a href="module-CoreHelpers.html#.QueryParsefy">QueryParsefy</a></li><li><a href="module-CoreHelpers.html#.QueryStringify">QueryStringify</a></li><li><a href="module-CoreHelpers.html#.RemoveLocalData">RemoveLocalData</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToMutate">SelectFieldsToMutate</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToQuery">SelectFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToSearch">SelectFieldsToSearch</a></li><li><a href="module-CoreHelpers.html#.SetLocalData">SetLocalData</a></li></ul></div></li><li><a href="module-FormHelpers.html">FormHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:FormHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-FormHelpers.html#.filterOptionList">filterOptionList</a></li><li><a href="module-FormHelpers.html#.formHeaderTemplate">formHeaderTemplate</a></li><li><a href="module-FormHelpers.html#.getInputFields">getInputFields</a></li><li><a href="module-FormHelpers.html#.inputChange">inputChange</a></li><li><a href="module-FormHelpers.html#.inputField">inputField</a></li><li><a href="module-FormHelpers.html#.inputLabel">inputLabel</a></li><li><a href="module-FormHelpers.html#.isFieldEnum">isFieldEnum</a></li><li><a href="module-FormHelpers.html#.isFieldRequired">isFieldRequired</a></li><li><a href="module-FormHelpers.html#.selectChange">selectChange</a></li><li><a href="module-FormHelpers.html#.selectEnumChange">selectEnumChange</a></li><li><a href="module-FormHelpers.html#.shouldSubmit">shouldSubmit</a></li><li><a href="module-FormHelpers.html#.submitForm">submitForm</a></li></ul></div></li><li><a href="module-ResponseHandlers.html">ResponseHandlers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ResponseHandlers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ResponseHandlers.html#.ErrorHandler">ErrorHandler</a></li><li><a href="module-ResponseHandlers.html#.SuccessHandler">SuccessHandler</a></li></ul></div></li><li><a href="module-SearchHelpers.html">SearchHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SearchHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SearchHelpers.html#.changeFields">changeFields</a></li><li><a href="module-SearchHelpers.html#.resetSearch">resetSearch</a></li><li><a href="module-SearchHelpers.html#.submitSearch">submitSearch</a></li></ul></div></li><li><a href="module-TableHelpers.html">TableHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:TableHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-TableHelpers.html#.changeColumns">changeColumns</a></li><li><a href="module-TableHelpers.html#.changeLimit">changeLimit</a></li><li><a href="module-TableHelpers.html#.changePage">changePage</a></li><li><a href="module-TableHelpers.html#.changeSort">changeSort</a></li><li><a href="module-TableHelpers.html#.toggleViewRecord">toggleViewRecord</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Namespaces</h3><ul><li><a href="module-CoreHelpers-DocCookies.html">CoreHelpers~DocCookies</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers~DocCookies_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers-DocCookies.html#.getItem">getItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.hasItem">hasItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.removeItem">removeItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.setItem">setItem</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#_initSearchQueryStates">_initSearchQueryStates</a></li><li><a href="global.html#AUTOBAHNJS_DEBUG">AUTOBAHNJS_DEBUG</a></li><li><a href="global.html#AUTOBAHNJS_VERSION">AUTOBAHNJS_VERSION</a></li><li><a href="global.html#errResponse">errResponse</a></li><li><a href="global.html#isActionVisibile">isActionVisibile</a></li><li><a href="global.html#successResponse">successResponse</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import { Input, Label } from 'reactstrap'
+import moment from 'moment'
+
+import { SuccessHandler, ErrorHandler } from './ResponseHandler'
+
+import DateAndTime from '../components/DateAndTime'
+import FileManager from '../components/FileManager'
+import SelectSearch from '../components/SelectSearch'
+
+/** @module FormHelpers */
+
+
+/**
+ * Generate form header template
+ * 
+ * @returns {Object[]} Array of objects
+ * @author Jonathan
+ */
+export function formHeaderTemplate({ method, formTitle, goBack } = {}) {
+	return (
+		&lt;div className="c-table__title d-flex justify-content-between align-items-center mb-3">
+			&lt;div className="d-flex">
+				&lt;button className="btn btn-sm btn-secondary mr-1" title="Back to List"
+					onClick={goBack}>
+					&lt;i className="fa fa-arrow-left">&lt;/i>
+				&lt;/button>
+				&lt;span className="c-view__title">
+					&lt;span className="legend">
+						{method === 'edit' &amp;&amp; &lt;i className="icon-pencil">&lt;/i> }
+						{method === 'add' &amp;&amp; &lt;i className="icon-plus">&lt;/i> }
+					&lt;/span>
+					&lt;span className="name">
+						{method === 'edit' &amp;&amp; 'Edit'}
+						{method === 'add' &amp;&amp; 'Add New'}
+						{' '}
+						{formTitle}
+					&lt;/span>
+				&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	)
+}
+
+
+/**
+ * Get all input fields
+ * 
+ * @returns {Object[]} Array of objects
+ * @author Jonathan
+ */
+export function getInputFields({ props, context }) {
+	let fieldsToInput = []
+	const { fields } = context
+	const { entity, asyncQuery, method } = props
+
+	fields.forEach(f => {
+		if (f.field !== '')  {
+
+			const varType = f.varType
+			const searchType = f.searchType
+			const options = f.searchOptions
+			const searchOptionKey = f.searchOptionKey
+
+			const isEnum = isFieldEnum(varType) // /Enum*/g.test(varType)
+			const isRequired = f.isRequired || isFieldRequired(varType) //varType.includes('!')
+
+			const isBool = varType === 'Boolean'
+			const isInt = varType === 'Int' || varType === 'Int!'
+			const isFloat = varType === 'Float' || varType === 'Float!'
+			const isFloatInt = isInt || isFloat
+			const isDate = varType === 'DateTime' || varType === 'DateTime!'
+			const isNumber = searchType === 'number'
+			const isAsyncMode = f.searchModeAsync
+
+			const inputOptions = () => {
+				const data = props.extradata
+				
+				if (searchType !== undefined &amp;&amp; searchType === 'select') {
+					if (isEnum) return data.enumRepository[0][options]
+					if (isBool) return options
+					if (isAsyncMode) return asyncQuery[options]
+					return data[options].items || []
+				}
+				return ''
+			}
+
+			const inputValue = () => {
+				const value = entity[f.field]
+
+				// current value is undefined, show default values
+				if (value === undefined || value === null) {
+
+					// if form.defaultValue exists, use the value from this.props
+					if (isDate) {
+						if (f.form !== undefined) return moment(f.form.defaultValue ).format('YYYY-MM-DD HH:mm:ss')
+						return moment().format('YYYY-MM-DD HH:mm:ss')
+					}
+					// if (f.form !== undefined) return props[f.form.defaultValue]
+
+					// else use default values
+					if (isBool) return false
+					if (isEnum) return null
+					if (isFloat) return 0.00
+					if (isInt || isNumber) return 0
+					return ''
+				}
+				
+				return value
+			}
+
+			const inputType = () => {
+				// if searchType undefined, 
+				// determine form input type via the vartype. 
+				// Default is 'text'
+				if (searchType === undefined) {
+					if (isFloatInt) return 'number'
+					return 'text'
+				}
+
+				// else return the pre-set type
+				return searchType
+			}
+
+			const optionKeyValue = () => {
+				if (isEnum) {
+					return 'name'
+				} else {
+					if (isBool) return 'value'
+					if (varType === 'ID' 
+						|| varType === 'ID!'
+						|| varType === 'Serialized' 
+						|| varType === 'Serialized!'
+					) return 'Id'
+
+					return searchOptionKey
+				}
+			}
+
+			const isDisabled = () => {
+				if (f.form !== undefined) {
+					if (typeof f.form.readOnly.add !== 'boolean' || typeof f.form.readOnly.edit !== 'boolean') {
+						if (method === 'add') {
+							return new Function('props', `return ${f.form.readOnly.add}`)(props)
+						}
+						if (method === 'edit') {
+							return new Function('props', `return ${f.form.readOnly.edit}`)(props)
+						}
+					} else {
+						return method === 'add' &amp;&amp; f.form.readOnly.add || method === 'edit' &amp;&amp; f.form.readOnly.edit
+					}
+				}
+				return false
+			}
+
+			const field = {
+				field: f.field,
+				value: inputValue(),
+				label: f.title,
+				inputType: inputType(), //searchType !== undefined ? searchType : 'text',
+				options: inputOptions(),
+				optionKeyName: isEnum || isBool ? 'name' : (searchOptionKey || null),
+				optionKeyValue: optionKeyValue(),
+				optionQueryKey: options,
+				lookupUrl: f.searchLookupComponent !== undefined ? f.searchLookupComponent : '',
+				lookupField: f.searchLookupComponent !== undefined ? f.searchOptionKey : '',
+				varType,
+				isRequired,
+				isEnum,
+				isAsyncMode,
+				isDisabled: isDisabled(), 
+				// f.form !== undefined 
+				// ? (method === 'add' &amp;&amp; f.form.readOnly.add) || (method === 'edit' &amp;&amp; f.form.readOnly.edit)
+				// : false,
+				isHidden: f.hidden !== undefined 
+					? (method === 'add' &amp;&amp; f.hidden.form.add) || (method === 'edit' &amp;&amp; f.hidden.form.edit) 
+					: false,
+				optionsMulti: f.searchMulti !== undefined &amp;&amp; f.searchMulti,
+				fileOptions: f.fileOptions !== undefined &amp;&amp; f.fileOptions
+			}
+			
+			// if (f.showFormDefault) fieldsToInput.push(field)
+			if (f.hidden !== undefined) {
+				if ((method === 'add' &amp;&amp; !f.hidden.form.add) || (method === 'edit' &amp;&amp; !f.hidden.form.edit)) {
+					fieldsToInput.push(field)
+				}
+			}
+		}
+	})
+
+	return fieldsToInput
+}
+
+
+/**
+ * Form input label displayer
+ *
+ * @returns {Element} &lt;Label />
+ * @author Jonathan
+ */
+export function inputLabel({ input, label, varType  } = {}) {
+	return (
+		&lt;Label htmlFor={input}>
+			{label}
+			{' '}
+			{ isFieldRequired(varType) &amp;&amp; &lt;span className="text-danger">*&lt;/span> }
+		&lt;/Label>
+	)
+}
+
+
+/**
+ * Form input field displayer
+ *
+ * @returns {Element} Input Element
+ * @author Jonathan
+ */
+export function inputField({ input, options, onChange, value, disabled } = {}) {
+	const f = input
+	const fieldName = f.field || f.input
+	const type = f.inputType
+
+	if (type === 'select') {
+		return (
+			&lt;SelectSearch 
+				type={f.isAsyncMode ? 'async' : 'select'}
+				name={fieldName}
+				searchKey={{
+					value: f.optionKeyValue,
+					label: f.optionKeyName,
+					variables: ''
+				}}
+				searchQuery={options}
+				searchQueryKey={f.optionQueryKey}
+				multi={f.optionsMulti}
+
+				searchValue={value} // current value if exists
+				searchOnChange={onChange}
+				searchLookupField={f.lookupField}
+				searchLookupUrl={f.lookupUrl}
+				disabled={disabled}
+			/>
+		)
+	}
+	if (type === 'text' || type === 'password' || type === 'tel' || type === 'number' || type === 'textarea') {
+		return (
+			&lt;Input type={f.inputType}
+				name={fieldName}
+				placeholder={f.label}
+				value={value}
+				onChange={onChange}
+				disabled={disabled}
+			/>
+		)
+	}
+	if (type === 'checkbox') {
+		return (                                        
+			&lt;Label className="switch switch-icon switch-pill switch-success-outline-alt">
+				&lt;Input type="checkbox" 
+					className="switch-input"
+					checked={value}
+					onChange={onChange} 
+					disabled={disabled}
+				/>
+				&lt;span className="switch-label" data-on={'\uf00c'} data-off={'\uf00d'}>&lt;/span>
+				&lt;span className="switch-handle">&lt;/span>
+			&lt;/Label>
+		)
+	}
+	if (type === 'date') {
+		if (disabled) {
+			return (
+				&lt;Input type='text' id="" 
+					placeholder={f.label}
+					value={value}
+					disabled={disabled}
+				/>
+			)
+		}
+		return (
+			&lt;DateAndTime 
+				value={value} 
+				onChange={onChange} 
+			/>
+		)
+	}
+	if (type === 'file') {
+		return (
+			&lt;FileManager 
+				value={value || []} 
+				onChange={onChange} 
+				fileLimit={f.fileOptions.fileLimit || 1}
+			/>
+		)
+	}
+	return null
+}
+
+
+/**
+ * Handle Input Value
+ * 
+ * @returns {string} Result value
+ * @author Jonathan
+ */
+export function inputChange({ type, event }) {
+	const { target } = event
+	const value = () => {
+		if (target === undefined) return event
+
+		if (target.type === 'checkbox') {
+			return target.checked 
+		} else {
+			if (type.includes('Int')) return parseInt(target.value) || 0
+			if (type.includes('Float')) return parseFloat(target.value) || 0
+		}
+
+		return target.value
+	}
+
+	return value()
+}
+
+
+/**
+ * Handle Select Value
+ * 
+ * @returns {string} Result value
+ * @author Jonathan
+ */
+export function selectChange({ event }) {
+	const value = v => {
+		switch (v.toLowerCase().trim()) {
+		case 'true': case 'yes': case '1': return true
+		case 'false': case 'no': case '0': case null: return false
+		default: return Boolean('')
+		}
+	}
+
+	return value(event.target.value)
+}
+
+
+/**
+ * Handle Enum Select Value
+ * 
+ * @returns {string} Result value
+ * @author Jonathan
+ */
+export function selectEnumChange({ event }) {
+	return event.target.value === '' ? null : event.target.value
+}
+
+
+/**
+ * Submit the form
+ * 
+ * @param {object} data Form Data
+ * @returns {Promise} Callback Suuccess or Error Handler
+ * @author Jonathan
+ */
+export function submitForm({ props, context, entity, callback }) {
+	props.mutate({
+		variables: entity
+	})
+		.then(() => SuccessHandler({
+			context: context, 
+			callback: context.onGoBack()
+		}))
+		.catch(error => {
+			ErrorHandler({
+				context: context,
+				error: { error },
+				callback: typeof callback === 'function' ? callback() : ''
+			})
+		})
+}
+
+
+/**
+ * Check if all required fields have value
+ * before submitting the form
+ * 
+ * @returns {Boolean} True / False
+ * @author Jonathan
+ */
+export function shouldSubmit({ entity, fields }) {
+	let required = []
+
+	Object.keys(entity).forEach(e => {
+		if (e !== '__typename') {
+			const varType = fields.find(f => f.field === e).varType
+			if (isFieldRequired(varType)) required.push(e)
+		}
+	})
+	
+	return required.every(r => (entity[r] !== null &amp;&amp; entity[r] !== '' &amp;&amp; entity[r] !== undefined))
+}
+
+
+/**
+ * Check if field is required
+ * 
+ * @param {String} varType VarType
+ * @returns {Boolean} True / False
+ * @author Jonathan
+ */
+export function isFieldRequired(varType) {
+	return varType.includes('!')
+}
+
+
+/**
+ * Check if field is an Enum
+ * 
+ * @param {String} varType VarType
+ * @returns {Boolean} True / False
+ * @author Jonathan
+ */
+export function isFieldEnum(varType) {
+	return /Enum*/g.test(varType)
+}
+
+
+/**
+ * Filter a search option list
+ * 
+ * @param {Array} list List to be filtered
+ * @param {String} field Field to match
+ * @param {String} value Current value need to match
+ * @returns {Object[]} Array of objects
+ * @author Jonathan
+ * @todo Allow multiple conditions/fields to match
+ */
+export function filterOptionList(list, field, value) {
+	return list.items.filter(l => l[field] === value)
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">Copyright 2018</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

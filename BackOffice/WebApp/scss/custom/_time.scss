@@ -1,0 +1,28 @@
+.c-time {
+    text-align: center;
+    line-height: 1.2;
+    color: #aaabae;
+    white-space: nowrap;
+    span {
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: .1em;
+    }       
+    em {
+        display: block;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+.c-time__date {
+	visibility: visible;
+	opacity: 1;
+	font-size: 1.2em;
+	// transition-delay: .3s;
+	.sidebar-minimized & {
+		visibility: hidden;
+		opacity: 0;
+		font-size: 0;
+		transition: font-size 0 ease .5s, visibility .3s linear, opacity .3s linear;
+	}
+}

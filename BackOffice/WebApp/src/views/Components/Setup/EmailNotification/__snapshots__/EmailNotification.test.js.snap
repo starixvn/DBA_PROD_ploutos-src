@@ -1,0 +1,2456 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmailNotification /> should render component 1`] = `
+<MockedProvider
+  addTypename={false}
+>
+  <ApolloProvider
+    client={
+      ApolloClient {
+        "addTypename": true,
+        "dataId": [Function],
+        "dataIdFromObject": [Function],
+        "disableNetworkFetches": false,
+        "fieldWithArgs": [Function],
+        "fragmentMatcher": HeuristicFragmentMatcher {},
+        "initialState": Object {},
+        "middleware": [Function],
+        "mutate": [Function],
+        "networkInterface": MockNetworkInterface {
+          "mockedResponsesByKey": Object {},
+        },
+        "query": [Function],
+        "queryDeduplication": true,
+        "queryManager": QueryManager {
+          "addTypename": true,
+          "deduplicator": Deduplicator {
+            "inFlightRequestPromises": Object {
+              "query EXTRAQUERY_VIEW {
+  enumRepository {
+    BrandMarketEmailNotificationTypeEnum
+    __typename
+  }
+  brandMarketList(count: false, paging: {offset: 0, limit: 100}) {
+    pagingInfo {
+      offset
+      limit
+      totalCount
+      __typename
+    }
+    items {
+      Id
+      CurrencyCode
+      BrandCode
+      __typename
+    }
+    __typename
+  }
+}
+|undefined|EXTRAQUERY_VIEW": Promise {},
+              "query QUERY_VIEW($Id: ID!) {
+  brandMarketEmailNotificationSetup(Id: $Id) {
+    Id
+    ActiveRecord
+    BrandMarketId
+    BrandCode
+    CurrencyCode
+    CurrencyName
+    CountryCode
+    CountryName
+    EmailNotificationType
+    EmailTemplateCode
+    CreatedById
+    DateCreated
+    ModifiedById
+    DateModified
+    __typename
+  }
+}
+|{}|QUERY_VIEW": Promise {},
+            },
+            "networkInterface": MockNetworkInterface {
+              "mockedResponsesByKey": Object {},
+            },
+          },
+          "disableBroadcasting": false,
+          "fetchQueryPromises": Object {
+            "3": Object {
+              "promise": undefined,
+              "reject": [Function],
+              "resolve": [Function],
+            },
+            "4": Object {
+              "promise": undefined,
+              "reject": [Function],
+              "resolve": [Function],
+            },
+          },
+          "fragmentMatcher": HeuristicFragmentMatcher {},
+          "idCounter": 5,
+          "lastRequestId": Object {
+            "1": 4,
+            "2": 3,
+          },
+          "mutationStore": MutationStore {
+            "store": Object {},
+          },
+          "networkInterface": MockNetworkInterface {
+            "mockedResponsesByKey": Object {},
+          },
+          "observableQueries": Object {
+            "1": Object {
+              "observableQuery": ObservableQuery {
+                "isCurrentlyPolling": false,
+                "observers": Array [
+                  Object {
+                    "error": [Function],
+                    "next": [Function],
+                  },
+                ],
+                "options": Object {
+                  "metadata": Object {
+                    "reactComponent": Object {
+                      "displayName": "Apollo(Apollo(Apollo(Apollo(EmailNotification))))",
+                    },
+                  },
+                  "notifyOnNetworkStatusChange": false,
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "EXTRAQUERY_VIEW",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "enumRepository",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "BrandMarketEmailNotificationTypeEnum",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "count",
+                                  },
+                                  "value": Object {
+                                    "kind": "BooleanValue",
+                                    "value": false,
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "paging",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "offset",
+                                        },
+                                        "value": Object {
+                                          "kind": "IntValue",
+                                          "value": "0",
+                                        },
+                                      },
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "limit",
+                                        },
+                                        "value": Object {
+                                          "kind": "IntValue",
+                                          "value": "100",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                              ],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "brandMarketList",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "pagingInfo",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "offset",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "limit",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "totalCount",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "items",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "Id",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "CurrencyCode",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "BrandCode",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 575,
+                      "start": 0,
+                    },
+                  },
+                },
+                "queryId": "1",
+                "queryManager": [Circular],
+                "scheduler": QueryScheduler {
+                  "inFlightQueries": Object {},
+                  "intervalQueries": Object {},
+                  "pollingTimers": Object {},
+                  "queryManager": [Circular],
+                  "registeredQueries": Object {},
+                },
+                "shouldSubscribe": true,
+                "subscriberFunction": [Function],
+                "subscriptionHandles": Array [],
+                "variables": Object {},
+              },
+            },
+            "2": Object {
+              "observableQuery": ObservableQuery {
+                "isCurrentlyPolling": false,
+                "observers": Array [
+                  Object {
+                    "error": [Function],
+                    "next": [Function],
+                  },
+                ],
+                "options": Object {
+                  "fetchPolicy": "network-only",
+                  "metadata": Object {
+                    "reactComponent": Object {
+                      "displayName": "Apollo(Apollo(EmailNotification))",
+                    },
+                  },
+                  "notifyOnNetworkStatusChange": true,
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "QUERY_VIEW",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "Id",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "Id",
+                                    },
+                                  },
+                                },
+                              ],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "brandMarketEmailNotificationSetup",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "Id",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "ActiveRecord",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "BrandMarketId",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "BrandCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CurrencyCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CurrencyName",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CountryCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CountryName",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "EmailNotificationType",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "EmailTemplateCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CreatedById",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "DateCreated",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "ModifiedById",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "DateModified",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [
+                          Object {
+                            "defaultValue": undefined,
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NonNullType",
+                              "type": Object {
+                                "kind": "NamedType",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "ID",
+                                },
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Id",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 358,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {
+                    "Id": undefined,
+                  },
+                },
+                "queryId": "2",
+                "queryManager": [Circular],
+                "scheduler": QueryScheduler {
+                  "inFlightQueries": Object {},
+                  "intervalQueries": Object {},
+                  "pollingTimers": Object {},
+                  "queryManager": [Circular],
+                  "registeredQueries": Object {},
+                },
+                "shouldSubscribe": true,
+                "subscriberFunction": [Function],
+                "subscriptionHandles": Array [],
+                "variables": Object {
+                  "Id": undefined,
+                },
+              },
+            },
+          },
+          "pollingTimers": Object {},
+          "queryDeduplication": true,
+          "queryDocuments": Object {
+            "1": Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "EXTRAQUERY_VIEW",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "enumRepository",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "BrandMarketEmailNotificationTypeEnum",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "__typename",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "count",
+                            },
+                            "value": Object {
+                              "kind": "BooleanValue",
+                              "value": false,
+                            },
+                          },
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "paging",
+                            },
+                            "value": Object {
+                              "fields": Array [
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "offset",
+                                  },
+                                  "value": Object {
+                                    "kind": "IntValue",
+                                    "value": "0",
+                                  },
+                                },
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "limit",
+                                  },
+                                  "value": Object {
+                                    "kind": "IntValue",
+                                    "value": "100",
+                                  },
+                                },
+                              ],
+                              "kind": "ObjectValue",
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "brandMarketList",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "pagingInfo",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "offset",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "limit",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "totalCount",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "__typename",
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "items",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "Id",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "CurrencyCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "BrandCode",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "__typename",
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            Object {
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "__typename",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 575,
+                "source": Object {
+                  "body": "
+            query EXTRAQUERY_VIEW {				           
+                enumRepository{
+                    BrandMarketEmailNotificationTypeEnum
+                }
+                brandMarketList(
+                    count:false,
+                    paging:{
+                        offset: 0
+                        limit: 100
+                    }
+                ){
+                    pagingInfo {offset, limit, totalCount}
+                    items {
+                        Id
+						CurrencyCode
+						BrandCode
+                    }
+                }
+            }
+        ",
+                  "locationOffset": Object {
+                    "column": 1,
+                    "line": 1,
+                  },
+                  "name": "GraphQL request",
+                },
+                "start": 0,
+              },
+            },
+            "2": Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "QUERY_VIEW",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "Id",
+                            },
+                            "value": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Id",
+                              },
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "brandMarketEmailNotificationSetup",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Id",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "ActiveRecord",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "BrandMarketId",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "BrandCode",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "CurrencyCode",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "CurrencyName",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "CountryCode",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "CountryName",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "EmailNotificationType",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "EmailTemplateCode",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "CreatedById",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "DateCreated",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "ModifiedById",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "DateModified",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "__typename",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [
+                    Object {
+                      "defaultValue": undefined,
+                      "kind": "VariableDefinition",
+                      "type": Object {
+                        "kind": "NonNullType",
+                        "type": Object {
+                          "kind": "NamedType",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "ID",
+                          },
+                        },
+                      },
+                      "variable": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "Id",
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 358,
+                "source": Object {
+                  "body": "
+            query QUERY_VIEW( $Id: ID! ){
+                brandMarketEmailNotificationSetup ( Id: $Id ){            
+                    Id,ActiveRecord,BrandMarketId,BrandCode,CurrencyCode,CurrencyName,CountryCode,CountryName,EmailNotificationType,EmailTemplateCode,CreatedById,DateCreated,ModifiedById,DateModified
+                }
+            }
+        ",
+                  "locationOffset": Object {
+                    "column": 1,
+                    "line": 1,
+                  },
+                  "name": "GraphQL request",
+                },
+                "start": 0,
+              },
+            },
+          },
+          "queryIdsByName": Object {
+            "EXTRAQUERY_VIEW": Array [
+              "1",
+            ],
+            "QUERY_VIEW": Array [
+              "2",
+            ],
+          },
+          "queryListeners": Object {
+            "1": Array [
+              [Function],
+            ],
+            "2": Array [
+              [Function],
+            ],
+          },
+          "queryStore": QueryStore {
+            "store": Object {
+              "1": Object {
+                "document": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "EXTRAQUERY_VIEW",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "enumRepository",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "BrandMarketEmailNotificationTypeEnum",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "__typename",
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "count",
+                                },
+                                "value": Object {
+                                  "kind": "BooleanValue",
+                                  "value": false,
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "paging",
+                                },
+                                "value": Object {
+                                  "fields": Array [
+                                    Object {
+                                      "kind": "ObjectField",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "offset",
+                                      },
+                                      "value": Object {
+                                        "kind": "IntValue",
+                                        "value": "0",
+                                      },
+                                    },
+                                    Object {
+                                      "kind": "ObjectField",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "limit",
+                                      },
+                                      "value": Object {
+                                        "kind": "IntValue",
+                                        "value": "100",
+                                      },
+                                    },
+                                  ],
+                                  "kind": "ObjectValue",
+                                },
+                              },
+                            ],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "brandMarketList",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "pagingInfo",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "offset",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "limit",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "totalCount",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "__typename",
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "items",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "Id",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "CurrencyCode",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "BrandCode",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "__typename",
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                Object {
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "__typename",
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 575,
+                    "source": Object {
+                      "body": "
+            query EXTRAQUERY_VIEW {				           
+                enumRepository{
+                    BrandMarketEmailNotificationTypeEnum
+                }
+                brandMarketList(
+                    count:false,
+                    paging:{
+                        offset: 0
+                        limit: 100
+                    }
+                ){
+                    pagingInfo {offset, limit, totalCount}
+                    items {
+                        Id
+						CurrencyCode
+						BrandCode
+                    }
+                }
+            }
+        ",
+                      "locationOffset": Object {
+                        "column": 1,
+                        "line": 1,
+                      },
+                      "name": "GraphQL request",
+                    },
+                    "start": 0,
+                  },
+                },
+                "graphQLErrors": Array [],
+                "metadata": Object {
+                  "reactComponent": Object {
+                    "displayName": "Apollo(Apollo(Apollo(Apollo(EmailNotification))))",
+                  },
+                },
+                "networkError": null,
+                "networkStatus": 1,
+                "previousVariables": null,
+                "queryString": "query EXTRAQUERY_VIEW {
+  enumRepository {
+    BrandMarketEmailNotificationTypeEnum
+    __typename
+  }
+  brandMarketList(count: false, paging: {offset: 0, limit: 100}) {
+    pagingInfo {
+      offset
+      limit
+      totalCount
+      __typename
+    }
+    items {
+      Id
+      CurrencyCode
+      BrandCode
+      __typename
+    }
+    __typename
+  }
+}
+",
+                "variables": Object {},
+              },
+              "2": Object {
+                "document": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "QUERY_VIEW",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "Id",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "Id",
+                                  },
+                                },
+                              },
+                            ],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "brandMarketEmailNotificationSetup",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "Id",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "ActiveRecord",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "BrandMarketId",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "BrandCode",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "CurrencyCode",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "CurrencyName",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "CountryCode",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "CountryName",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "EmailNotificationType",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "EmailTemplateCode",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "CreatedById",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "DateCreated",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "ModifiedById",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "DateModified",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "__typename",
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [
+                        Object {
+                          "defaultValue": undefined,
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NonNullType",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "ID",
+                              },
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "Id",
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 358,
+                    "source": Object {
+                      "body": "
+            query QUERY_VIEW( $Id: ID! ){
+                brandMarketEmailNotificationSetup ( Id: $Id ){            
+                    Id,ActiveRecord,BrandMarketId,BrandCode,CurrencyCode,CurrencyName,CountryCode,CountryName,EmailNotificationType,EmailTemplateCode,CreatedById,DateCreated,ModifiedById,DateModified
+                }
+            }
+        ",
+                      "locationOffset": Object {
+                        "column": 1,
+                        "line": 1,
+                      },
+                      "name": "GraphQL request",
+                    },
+                    "start": 0,
+                  },
+                },
+                "graphQLErrors": Array [],
+                "metadata": Object {
+                  "reactComponent": Object {
+                    "displayName": "Apollo(Apollo(EmailNotification))",
+                  },
+                },
+                "networkError": null,
+                "networkStatus": 1,
+                "previousVariables": null,
+                "queryString": "query QUERY_VIEW($Id: ID!) {
+  brandMarketEmailNotificationSetup(Id: $Id) {
+    Id
+    ActiveRecord
+    BrandMarketId
+    BrandCode
+    CurrencyCode
+    CurrencyName
+    CountryCode
+    CountryName
+    EmailNotificationType
+    EmailTemplateCode
+    CreatedById
+    DateCreated
+    ModifiedById
+    DateModified
+    __typename
+  }
+}
+",
+                "variables": Object {
+                  "Id": undefined,
+                },
+              },
+            },
+          },
+          "reducerConfig": Object {
+            "addTypename": true,
+            "customResolvers": undefined,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": [Function],
+          },
+          "reduxRootSelector": [Function],
+          "scheduler": QueryScheduler {
+            "inFlightQueries": Object {},
+            "intervalQueries": Object {},
+            "pollingTimers": Object {},
+            "queryManager": [Circular],
+            "registeredQueries": Object {},
+          },
+          "ssrMode": false,
+          "store": Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          },
+        },
+        "reducerConfig": Object {
+          "addTypename": true,
+          "customResolvers": undefined,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": [Function],
+        },
+        "resetStore": [Function],
+        "setStore": [Function],
+        "ssrMode": false,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "version": "1.9.3",
+        "watchQuery": [Function],
+      }
+    }
+    store={null}
+  >
+    <QueryRecyclerProvider>
+      <Apollo(Apollo(Apollo(Apollo(EmailNotification))))
+        data={
+          Object {
+            "brandMarketEmailNotificationSetup": Array [
+              Object {
+                "Id": 1,
+              },
+            ],
+            "brandMarketEmailNotificationSetupList": Object {
+              "items": Array [
+                Object {
+                  "Id": 1,
+                },
+              ],
+              "pagingInfo": Object {
+                "limit": 10,
+                "offset": 0,
+                "totalCount": 1,
+              },
+            },
+            "loading": false,
+          }
+        }
+        extradata={
+          Object {
+            "enumRepository": Array [],
+          }
+        }
+        location={
+          Object {
+            "search": "",
+          }
+        }
+        match={
+          Object {
+            "params": Object {
+              "action": "",
+            },
+          }
+        }
+      >
+        <Apollo(Apollo(Apollo(EmailNotification)))
+          data={
+            Object {
+              "brandMarketEmailNotificationSetup": Array [
+                Object {
+                  "Id": 1,
+                },
+              ],
+              "brandMarketEmailNotificationSetupList": Object {
+                "items": Array [
+                  Object {
+                    "Id": 1,
+                  },
+                ],
+                "pagingInfo": Object {
+                  "limit": 10,
+                  "offset": 0,
+                  "totalCount": 1,
+                },
+              },
+              "loading": false,
+            }
+          }
+          extradata={
+            Object {
+              "error": undefined,
+              "fetchMore": [Function],
+              "loading": true,
+              "networkStatus": 1,
+              "refetch": [Function],
+              "startPolling": [Function],
+              "stopPolling": [Function],
+              "subscribeToMore": [Function],
+              "updateQuery": [Function],
+              "variables": Object {},
+            }
+          }
+          location={
+            Object {
+              "search": "",
+            }
+          }
+          match={
+            Object {
+              "params": Object {
+                "action": "",
+              },
+            }
+          }
+        >
+          <Apollo(Apollo(EmailNotification))
+            data={
+              Object {
+                "brandMarketEmailNotificationSetup": Array [
+                  Object {
+                    "Id": 1,
+                  },
+                ],
+                "brandMarketEmailNotificationSetupList": Object {
+                  "items": Array [
+                    Object {
+                      "Id": 1,
+                    },
+                  ],
+                  "pagingInfo": Object {
+                    "limit": 10,
+                    "offset": 0,
+                    "totalCount": 1,
+                  },
+                },
+                "loading": false,
+              }
+            }
+            extradata={
+              Object {
+                "error": undefined,
+                "fetchMore": [Function],
+                "loading": true,
+                "networkStatus": 1,
+                "refetch": [Function],
+                "startPolling": [Function],
+                "stopPolling": [Function],
+                "subscribeToMore": [Function],
+                "updateQuery": [Function],
+                "variables": Object {},
+              }
+            }
+            location={
+              Object {
+                "search": "",
+              }
+            }
+            match={
+              Object {
+                "params": Object {
+                  "action": "",
+                },
+              }
+            }
+            mutate={[Function]}
+          >
+            <Apollo(EmailNotification)
+              data={
+                Object {
+                  "error": undefined,
+                  "fetchMore": [Function],
+                  "loading": true,
+                  "networkStatus": 1,
+                  "refetch": [Function],
+                  "startPolling": [Function],
+                  "stopPolling": [Function],
+                  "subscribeToMore": [Function],
+                  "updateQuery": [Function],
+                  "variables": Object {
+                    "Id": undefined,
+                  },
+                }
+              }
+              extradata={
+                Object {
+                  "error": undefined,
+                  "fetchMore": [Function],
+                  "loading": true,
+                  "networkStatus": 1,
+                  "refetch": [Function],
+                  "startPolling": [Function],
+                  "stopPolling": [Function],
+                  "subscribeToMore": [Function],
+                  "updateQuery": [Function],
+                  "variables": Object {},
+                }
+              }
+              location={
+                Object {
+                  "search": "",
+                }
+              }
+              match={
+                Object {
+                  "params": Object {
+                    "action": "",
+                  },
+                }
+              }
+              mutate={[Function]}
+            >
+              <EmailNotification
+                component="EmailNotification"
+                createLink="/setup/email_notification/add"
+                data={
+                  Object {
+                    "error": undefined,
+                    "fetchMore": [Function],
+                    "loading": true,
+                    "networkStatus": 1,
+                    "refetch": [Function],
+                    "startPolling": [Function],
+                    "stopPolling": [Function],
+                    "subscribeToMore": [Function],
+                    "updateQuery": [Function],
+                    "variables": Object {
+                      "Id": undefined,
+                    },
+                  }
+                }
+                displayTitle="Email Notification"
+                displayTitleField="EmailTemplateCode"
+                displayWithComments={true}
+                export={
+                  Object {
+                    "customFilename": "",
+                    "query": Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "QUERY_LIST",
+                          },
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "count",
+                                    },
+                                    "value": Object {
+                                      "kind": "BooleanValue",
+                                      "value": true,
+                                    },
+                                  },
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "paging",
+                                    },
+                                    "value": Object {
+                                      "fields": Array [
+                                        Object {
+                                          "kind": "ObjectField",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "offset",
+                                          },
+                                          "value": Object {
+                                            "kind": "Variable",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "offset",
+                                            },
+                                          },
+                                        },
+                                        Object {
+                                          "kind": "ObjectField",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "limit",
+                                          },
+                                          "value": Object {
+                                            "kind": "Variable",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "limit",
+                                            },
+                                          },
+                                        },
+                                      ],
+                                      "kind": "ObjectValue",
+                                    },
+                                  },
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "filter",
+                                    },
+                                    "value": Object {
+                                      "fields": Array [],
+                                      "kind": "ObjectValue",
+                                    },
+                                  },
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "sort",
+                                    },
+                                    "value": Object {
+                                      "fields": Array [
+                                        Object {
+                                          "kind": "ObjectField",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "field",
+                                          },
+                                          "value": Object {
+                                            "kind": "Variable",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "sortBy",
+                                            },
+                                          },
+                                        },
+                                        Object {
+                                          "kind": "ObjectField",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "order",
+                                          },
+                                          "value": Object {
+                                            "kind": "Variable",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "sortOrder",
+                                            },
+                                          },
+                                        },
+                                      ],
+                                      "kind": "ObjectValue",
+                                    },
+                                  },
+                                ],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "brandMarketEmailNotificationSetupList",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "pagingInfo",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "offset",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "limit",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "totalCount",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                        ],
+                                      },
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "items",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "Id",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "BrandCode",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "CurrencyName",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "CountryName",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "EmailNotificationType",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "EmailTemplateCode",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "ModifiedById",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "DateModified",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [
+                            Object {
+                              "defaultValue": undefined,
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "Int",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "offset",
+                                },
+                              },
+                            },
+                            Object {
+                              "defaultValue": undefined,
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "Int",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "limit",
+                                },
+                              },
+                            },
+                            Object {
+                              "defaultValue": undefined,
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "BrandMarketEmailNotificationSetupSortingFields",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "sortBy",
+                                },
+                              },
+                            },
+                            Object {
+                              "defaultValue": undefined,
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "SortingOrder",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "sortOrder",
+                                },
+                              },
+                            },
+                          ],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 914,
+                        "start": 0,
+                      },
+                    },
+                    "targetSchemaKey": "brandMarketEmailNotificationSetupList",
+                  }
+                }
+                extradata={
+                  Object {
+                    "error": undefined,
+                    "fetchMore": [Function],
+                    "loading": true,
+                    "networkStatus": 1,
+                    "refetch": [Function],
+                    "startPolling": [Function],
+                    "stopPolling": [Function],
+                    "subscribeToMore": [Function],
+                    "updateQuery": [Function],
+                    "variables": Object {},
+                  }
+                }
+                listTitle="Email Notifications"
+                listWithComments={true}
+                listWithExport={false}
+                listWithSearch={false}
+                location={
+                  Object {
+                    "search": "",
+                  }
+                }
+                match={
+                  Object {
+                    "params": Object {
+                      "action": "",
+                    },
+                  }
+                }
+                mutate={[Function]}
+                schemaKey={
+                  Object {
+                    "auditTrail": "Brandmarketemailnotificationsetups",
+                    "comment": "Brandmarketemailnotificationsetups",
+                    "detail": "brandMarketEmailNotificationSetup",
+                    "list": "brandMarketEmailNotificationSetupList",
+                    "mutate": "brandMarketEmailNotificationSetupMutation",
+                  }
+                }
+                sortBy="DateModified"
+                sortOrder="DESC"
+              >
+                <Loader>
+                  <div
+                    className="c-loader"
+                  >
+                    <div
+                      className="fadeIn"
+                    >
+                      <p>
+                        Loading....
+                      </p>
+                      <Progress
+                        animated={true}
+                        color="success"
+                        max={100}
+                        tag="div"
+                        value="75"
+                      >
+                        <div
+                          className="progress"
+                        >
+                          <div
+                            aria-valuemax={100}
+                            aria-valuemin="0"
+                            aria-valuenow="75"
+                            className="progress-bar progress-bar-animated bg-success progress-bar-striped"
+                            role="progressbar"
+                            style={
+                              Object {
+                                "width": "75%",
+                              }
+                            }
+                          />
+                        </div>
+                      </Progress>
+                    </div>
+                  </div>
+                </Loader>
+              </EmailNotification>
+            </Apollo(EmailNotification)>
+          </Apollo(Apollo(EmailNotification))>
+        </Apollo(Apollo(Apollo(EmailNotification)))>
+      </Apollo(Apollo(Apollo(Apollo(EmailNotification))))>
+    </QueryRecyclerProvider>
+  </ApolloProvider>
+</MockedProvider>
+`;

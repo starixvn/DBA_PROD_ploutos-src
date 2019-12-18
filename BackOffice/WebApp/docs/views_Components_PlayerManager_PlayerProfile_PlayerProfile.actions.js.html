@@ -1,0 +1,588 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: views/Components/PlayerManager/PlayerProfile/PlayerProfile.actions.js | Blueberry Dev Docs</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">Blueberry Dev Docs</a></h1>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CoreHelpers.html">CoreHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers.html#.BoolOpts">BoolOpts</a></li><li><a href="module-CoreHelpers.html#.camelCaseToWords">camelCaseToWords</a></li><li><a href="module-CoreHelpers.html#.FormatCurrency">FormatCurrency</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToQuery">GetAllFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToView">GetAllFieldsToView</a></li><li><a href="module-CoreHelpers.html#.GetInitLimitValue">GetInitLimitValue</a></li><li><a href="module-CoreHelpers.html#.GetInitOffsetValue">GetInitOffsetValue</a></li><li><a href="module-CoreHelpers.html#.GetInitSearchValue">GetInitSearchValue</a></li><li><a href="module-CoreHelpers.html#.GetLocalData">GetLocalData</a></li><li><a href="module-CoreHelpers.html#.GetQueryMeta">GetQueryMeta</a></li><li><a href="module-CoreHelpers.html#.isObject">isObject</a></li><li><a href="module-CoreHelpers.html#.isObjectEmpty">isObjectEmpty</a></li><li><a href="module-CoreHelpers.html#.QueryParsefy">QueryParsefy</a></li><li><a href="module-CoreHelpers.html#.QueryStringify">QueryStringify</a></li><li><a href="module-CoreHelpers.html#.RemoveLocalData">RemoveLocalData</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToMutate">SelectFieldsToMutate</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToQuery">SelectFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToSearch">SelectFieldsToSearch</a></li><li><a href="module-CoreHelpers.html#.SetLocalData">SetLocalData</a></li></ul></div></li><li><a href="module-FormHelpers.html">FormHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:FormHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-FormHelpers.html#.filterOptionList">filterOptionList</a></li><li><a href="module-FormHelpers.html#.formHeaderTemplate">formHeaderTemplate</a></li><li><a href="module-FormHelpers.html#.getInputFields">getInputFields</a></li><li><a href="module-FormHelpers.html#.inputChange">inputChange</a></li><li><a href="module-FormHelpers.html#.inputField">inputField</a></li><li><a href="module-FormHelpers.html#.inputLabel">inputLabel</a></li><li><a href="module-FormHelpers.html#.isFieldEnum">isFieldEnum</a></li><li><a href="module-FormHelpers.html#.isFieldRequired">isFieldRequired</a></li><li><a href="module-FormHelpers.html#.selectChange">selectChange</a></li><li><a href="module-FormHelpers.html#.selectEnumChange">selectEnumChange</a></li><li><a href="module-FormHelpers.html#.shouldSubmit">shouldSubmit</a></li><li><a href="module-FormHelpers.html#.submitForm">submitForm</a></li></ul></div></li><li><a href="module-ResponseHandlers.html">ResponseHandlers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ResponseHandlers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ResponseHandlers.html#.ErrorHandler">ErrorHandler</a></li><li><a href="module-ResponseHandlers.html#.SuccessHandler">SuccessHandler</a></li></ul></div></li><li><a href="module-SearchHelpers.html">SearchHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SearchHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SearchHelpers.html#.changeFields">changeFields</a></li><li><a href="module-SearchHelpers.html#.resetSearch">resetSearch</a></li><li><a href="module-SearchHelpers.html#.submitSearch">submitSearch</a></li></ul></div></li><li><a href="module-TableHelpers.html">TableHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:TableHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-TableHelpers.html#.changeColumns">changeColumns</a></li><li><a href="module-TableHelpers.html#.changeLimit">changeLimit</a></li><li><a href="module-TableHelpers.html#.changePage">changePage</a></li><li><a href="module-TableHelpers.html#.changeSort">changeSort</a></li><li><a href="module-TableHelpers.html#.toggleViewRecord">toggleViewRecord</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Namespaces</h3><ul><li><a href="module-CoreHelpers-DocCookies.html">CoreHelpers~DocCookies</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers~DocCookies_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers-DocCookies.html#.getItem">getItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.hasItem">hasItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.removeItem">removeItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.setItem">setItem</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#_initSearchQueryStates">_initSearchQueryStates</a></li><li><a href="global.html#AUTOBAHNJS_DEBUG">AUTOBAHNJS_DEBUG</a></li><li><a href="global.html#AUTOBAHNJS_VERSION">AUTOBAHNJS_VERSION</a></li><li><a href="global.html#errResponse">errResponse</a></li><li><a href="global.html#isActionVisibile">isActionVisibile</a></li><li><a href="global.html#successResponse">successResponse</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import { Input } from 'reactstrap'
+
+// import SelectSearch from '../../../../components/SelectSearch'
+import { SuccessHandler, ErrorHandler } from '../../../../utils/ResponseHandler'
+
+export function actions(data, context) {
+	return ([
+		{
+			task: 'Verify',
+			action: 'verify',
+			icon: 'gavel',
+			color: 'danger',
+			isVisible: isActionVisibile('Created,Locked', 'verify', 'actionVerifyPlayerProfileMutation', data, context)
+		},
+		{
+			task: 'Activate',
+			action: 'activate',
+			icon: 'star',
+			color: 'danger',
+			isVisible: isActionVisibile('De_Activated', 'activate', 'actionActivatePlayerProfileMutation', data, context)
+		},
+		{
+			task: 'Unlock',
+			action: 'unlock',
+			icon: 'unlock',
+			color: 'danger',
+			isVisible: isActionVisibile('Locked', 'unlock', 'actionUnLockPlayerProfileMutation', data, context)
+		},
+		{
+			task: 'Edit',
+			action: 'edit',
+			icon: 'edit',
+			color: 'warning',
+			linkTo: `/player_manager/profile/f/edit/${data.Id}`,
+			isVisible: isActionVisibile('All', 'edit', 'actionEditPlayerProfileMutation', data, context)
+		},
+		{
+			tasks: [
+				{
+					task: 'Verify',
+					action: 'verify',
+					icon: 'gavel',
+					isVisible: isActionVisibile('Created,Locked', 'verify', 'actionVerifyPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Lock',
+					action: 'lock',
+					icon: 'lock',
+					isVisible: isActionVisibile('Created,UnLocked,Verified_by_Player,Verified_by_CS,Re_Activated,Password_Reset', 'lock', 'actionLockPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Unlock',
+					action: 'unlock',
+					icon: 'unlock',
+					isVisible: isActionVisibile('Locked', 'unlock', 'actionUnLockPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Reset Code',
+					action: 'resetCode',
+					icon: 'qrcode',
+					isVisible: isActionVisibile('All', 'resetCode', 'actionResetCodePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Reset Password',
+					action: 'resetPassword',
+					icon: 'asterisk',
+					isVisible: isActionVisibile('All', 'resetPassword', 'actionResetPasswordPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Deactivate',
+					action: 'deactivate',
+					icon: 'star',
+					isVisible: isActionVisibile('Created,Locked,UnLocked,Verified_by_Player,Verified_by_CS,Re_Activated', 'deactivate', 'actionDeactivatePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Activate',
+					action: 'activate',
+					icon: 'star',
+					isVisible: isActionVisibile('De_Activated', 'activate', 'actionActivatePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Enable',
+					action: 'enable',
+					icon: 'check-square',
+					isVisible: isActionVisibile('All', 'enable', 'actionEnablePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Archive',
+					action: 'archive',
+					icon: 'archive',
+					isVisible: isActionVisibile('All', 'archive', 'actionArchivePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Change Type',
+					action: 'changeType',
+					icon: 'tags',
+					isVisible: isActionVisibile('All', 'changeType', 'actionChangeTypePlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Change VIP Level',
+					action: 'changeVIP',
+					icon: 'suitcase',
+					isVisible: isActionVisibile('All', 'changeVIP', 'actionChangeVipPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Change FR Level',
+					action: 'changeFRL',
+					icon: 'warning',
+					isVisible: isActionVisibile('All', 'changeFRL', 'actionFraudRiskLevelPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Change PR Level',
+					action: 'changePRL',
+					icon: 'bank',
+					isVisible: isActionVisibile('All', 'changePRL', 'actionPaymentRiskLevelPlayerProfileMutation', data, context)
+				},
+				{
+					task: 'Change Bet Limit',
+					action: 'changeBLL',
+					icon: 'sliders',
+					isVisible: isActionVisibile('All', 'changeBLL', 'actionBetLimitLevelPlayerProfileMutation', data, context)
+				}
+			]
+		}
+	])
+}
+
+export function renderModalContent(v) {
+	// console.log(v)
+	const data = v.props.data.playerProfile[0]
+	const { Id, UserName, BrandCode } = data
+
+	// let comment = data.Remarks || ''
+	let PlayerType = data.PlayerType
+	let FraudRiskLevelId = data.FraudRiskLevelId
+	let GameBetLimitLevelId = data.GameBetLimitLevelId
+	let VipLevelId = data.VipLevelId
+	let PaymentRiskLevelId = data.PaymentRiskLevelId
+
+	// MODAL CONTENT PER ACTION
+	switch (v.action) {
+	case 'verify': return (
+		&lt;div>
+			&lt;p>Are you sure you want to verify this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={verifyProfile.bind(this)}>Verify
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'lock': return (
+		&lt;div>
+			&lt;p>Are you sure you want to lock this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={lockProfile.bind(this)}>Lock
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'unlock': return (
+		&lt;div>
+			&lt;p>Are you sure you want to unlock this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={unlockProfile.bind(this)}>Unlock
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'resetCode': return (
+		&lt;div>
+			&lt;p>Are you sure you want to Reset Code this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={resetCode.bind(this)}>Reset
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'resetPassword': return (
+		&lt;div>
+			&lt;p>Are you sure you want to resetPassword this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={resetPassword.bind(this)}>Reset
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'activate': return (
+		&lt;div>
+			&lt;p>Are you sure you want to activate this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={activateProfile.bind(this)}>Activate
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'deactivate': return (
+		&lt;div>
+			&lt;p>Are you sure you want to de-activate this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={deactivateProfile.bind(this)}>Deactivate
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'enable': return (
+		&lt;div>
+			&lt;p>Are you sure you want to enable this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={enableProfile.bind(this)}>Enable
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'archive': return (
+		&lt;div>
+			&lt;p>Are you sure you want to archive this profile?&lt;/p>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={archiveProfile.bind(this)}>Archive
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'changeType': return (
+		&lt;div>
+			&lt;p>Change Type of this profile.&lt;/p>
+			&lt;Input
+				type="select"
+				name="roles"
+				size="sm"
+				defaultValue={PlayerType}
+				// disabled={this.state.isSubmitting}
+				onChange={e => (PlayerType = e.target.value)}>
+				{
+					v.props.extradata.enumRepository[0].PlayerTypeEnum.map(v => (
+						&lt;option key={v.value} value={v.name}>{v.name}&lt;/option>
+					))
+				}
+			&lt;/Input>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={changeTypeProfile.bind(this)}>Change
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'changeFRL': return (
+		&lt;div>
+			&lt;p>Change Fraud Risk Level of this profile.&lt;/p>
+			&lt;Input
+				type="select"
+				name="roles"
+				size="sm"
+				defaultValue={FraudRiskLevelId}
+				// disabled={this.state.isSubmitting}
+				onChange={e => (FraudRiskLevelId = e.target.value)}>
+				{
+					v.props.extradata.fraudRiskLevelList.items.map(v => (
+						&lt;option key={v.Id} value={v.Id}>{v.FraudRiskLevelName}&lt;/option>
+					))
+				}
+			&lt;/Input>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={changeFRLevelProfile.bind(this)}>Change
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'changeBLL': return (
+		&lt;div>
+			&lt;p>Change Bet Limit Level of this profile.&lt;/p>
+			&lt;Input
+				type="select"
+				name="roles"
+				size="sm"
+				defaultValue={GameBetLimitLevelId}
+				// disabled={this.state.isSubmitting}
+				onChange={e => (GameBetLimitLevelId = e.target.value)}>
+				{
+					v.props.extradata.gameBetLimitLevelList.items.map(v => (
+						&lt;option key={v.Id} value={v.Id}>{v.BetLimitLevelDesc}&lt;/option>
+					))
+				}
+			&lt;/Input>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={changeBLLevelProfile.bind(this)}>Change
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'changeVIP': return (
+		&lt;div>
+			&lt;p>Change VIP Level of this profile.&lt;/p>
+			&lt;Input
+				type="select"
+				name="roles"
+				size="sm"
+				defaultValue={VipLevelId}
+				// disabled={this.state.isSubmitting}
+				onChange={e => (VipLevelId = e.target.value)}>
+				{
+					v.props.extradata.vIPLevelList.items.map(v => (
+						&lt;option key={v.Id} value={v.Id}>{v.VipLevelName}&lt;/option>
+					))
+				}
+			&lt;/Input>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={changeVIPLevelProfile.bind(this)}>Change
+			&lt;/button>
+		&lt;/div>
+	)
+	case 'changePRL': return (
+		&lt;div>
+			&lt;p>Change Payment Risk Level of this profile.&lt;/p>
+			&lt;Input
+				type="select"
+				name="roles"
+				size="sm"
+				defaultValue={PaymentRiskLevelId}
+				// disabled={this.state.isSubmitting}
+				onChange={e => (PaymentRiskLevelId = e.target.value)}>
+				{
+					v.props.extradata.paymentRiskLevelList.items.map(v => (
+						&lt;option key={v.Id} value={v.Id}>{v.PaymentRiskLevelName}&lt;/option>
+					))
+				}
+			&lt;/Input>
+			&lt;button type="submit" className="btn btn-sm btn-primary mt-2" 
+				onClick={changePRLevelProfile.bind(this)}>Change
+			&lt;/button>
+		&lt;/div>
+	)
+	}
+
+
+	//=== ACTION FUNCTIONS
+	// Must match to graphql query/mutate operations
+	function verifyProfile() {
+		v.props.verifyProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function lockProfile() {
+		v.props.lockProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function unlockProfile() {
+		v.props.unLockProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function resetCode() {
+		v.props.resetCodeProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then((data) => {
+				successResponse(v);
+				const parsedData = JSON.parse(data.data.actionResetCodePlayerProfileMutation.apiResult);
+				alert(parsedData.Data);
+			})
+			.catch(error => errResponse(v, error))
+	}
+	function resetPassword() {
+		v.props.resetPasswordProfileMutation({
+			variables: {
+				Username: UserName,
+				BrandCode: BrandCode
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function activateProfile() {
+		v.props.activateProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function deactivateProfile() {
+		v.props.deactivateProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function enableProfile() {
+		v.props.enableProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function archiveProfile() {
+		v.props.archiveProfileMutation({
+			variables: {
+				Username: UserName
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function changeTypeProfile() {
+		v.props.changeTypeProfileMutation({
+			variables: {
+				Id: Id,
+				PlayerType: PlayerType
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function changeFRLevelProfile() {
+		v.props.fraudRiskLevelProfileMutation({
+			variables: {
+				Id: Id,
+				FraudRiskLevelId: FraudRiskLevelId
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function changeBLLevelProfile() {
+		v.props.betLimitLevelProfileMutation({
+			variables: {
+				Id: Id,
+				GameBetLimitLevelId: GameBetLimitLevelId
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function changeVIPLevelProfile() {
+		v.props.vipLevelProfileMutation({
+			variables: {
+				Id: Id,
+				VipLevelId: VipLevelId
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function changePRLevelProfile() {
+		v.props.paymentRiskLevelProfileMutation({
+			variables: {
+				Id: Id,
+				PaymentRiskLevelId: PaymentRiskLevelId
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+}
+
+
+
+
+/**
+ * TICKET ACTION DISPLAY VISIBILITY
+ * 
+ * @param {string} a - Current status/es to match against
+ * @param {string} b - Action to be done
+ * @param {string} c - Required Access the user must have
+ * @param {object} d - Current data item
+ * @param {object} e - Inherited context from parent
+ * @returns {boolean} True / False
+ */
+function isActionVisibile(a, b, c, d, e) {
+	// return (a.indexOf(d.Status) !== -1 || a.indexOf('All') !== -1) &amp;&amp; e.handleElementAccess(b) &amp;&amp; true
+
+	// HIDE / SHOW VERIFICATION ACTION
+	if (a == 'actionVerifyPlayerProfileMutation' &amp;&amp; (d.PlayerRegisterStatus === 'Verified_by_Player' || d.PlayerRegisterStatus === 'Verified_by_CS')) return false
+	// return (a.indexOf(d.AccountStatus) !== -1 || a.indexOf('All') !== -1)
+	return (a.indexOf(d.AccountStatus) !== -1 || a.indexOf('All') !== -1) &amp;&amp; e.handleElementAccess(c) &amp;&amp; true
+}
+
+
+/**
+ * SUCCESS RESPONSE HANDLER
+ * 
+ * @param {any} v : Object (Props/Context) passed
+ * @returns {callback} SuccessHandler
+ */
+function successResponse(v) {
+	SuccessHandler({
+		context: v.context, 
+		callback: v.props.data.refetch().then(() => v.onModalClose()),
+	})
+}
+/**
+ * ERROR RESPONSE HANDLER
+ * 
+ * @param {any} v : 
+ * @param {any} err : Error message
+ * @returns {callback} ErrorHandler
+ */
+function errResponse(v, err) {
+	ErrorHandler({ 
+		context: v.context,
+		callback: v.onModalClose(),
+		error: { err } 
+	})
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">Copyright 2018</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"indent_size": 4,
+	"indent_char": " ",
+	"indent_with_tabs": true,
+	"css": {
+		"newline_between_rules": true,
+		"space_around_combinator": true
+	},
+	"js": {
+		"e4x": true
+	},
+	"html": {
+		"indent_inner_html": true
+	}
+}

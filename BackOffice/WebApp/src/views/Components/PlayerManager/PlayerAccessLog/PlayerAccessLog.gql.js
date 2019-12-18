@@ -1,0 +1,108 @@
+import gql from 'graphql-tag'
+import { GetAllFieldsToQuery, SelectFieldsToQuery, GetQueryMeta } from '../../../../utils/CoreHelpers'
+import { PlayerAccessLog as tableHeaders } from '../../../../data/TableHeaders'
+
+const component = 'PlayerAccessLog'
+const sortBy = 'PlayerAccessLogSortingFields!'
+const listSchemaKey = 'playerAccessLogList'
+const detailSchemaKey = 'playerAccessLog'
+// const mutateSchemaKey = ''
+
+function getQueryTypes(qt, cqt) {
+	const queryTypes = qt.split(',')
+	const customQueryTypes = cqt.split(',')
+
+	return (customQueryTypes.concat(queryTypes.filter(q => customQueryTypes.indexOf(q) < 0)))
+}
+
+export function getPlayerAccessLogs() {
+	// const specialFilter = ("{ PlayerProfileId: { parameter: $PlayerProfileId, expression: EQUALS }}").replace(/"/g,"")
+
+	const queryTypes = String(GetQueryMeta('getTypes', tableHeaders, component))
+	const queryFilters = GetQueryMeta('getFilters', tableHeaders, component)
+	// const queryFilters = JSON.stringify({
+	//     ...JSON.parse(GetQueryMeta('getFilters', tableHeaders, component)),
+	//     ...JSON.parse(specialFilter)
+	// })
+	const queryItems = String(SelectFieldsToQuery(tableHeaders, component))
+
+	return (
+		gql`
+            query QUERY_LIST(
+                $offset: Int!
+                $limit: Int!
+                $sortBy: ${sortBy}
+                $sortOrder: SortingOrder!				
+				${getQueryTypes(queryTypes, '$PlayerRegId: ID, $export: Boolean')}
+            ){
+                ${listSchemaKey}(
+                    export: $export
+                    count: true
+                    paging: {
+                        offset: $offset
+                        limit: $limit
+                    }
+                    filter: { 
+						${queryFilters.slice(1, -1)}
+						PlayerRegistrationId: { parameter: $PlayerRegId, expression: EQUALS }}
+                    sort: { 
+                        field: $sortBy
+                        order: $sortOrder 
+                    }
+                ){
+                    pagingInfo {offset, limit, totalCount}
+                    items {
+                        ${queryItems}
+                    }
+                } 
+            }
+        `
+	)
+}
+
+export function getPlayerAccessLog() {
+	const queryItems = String(GetAllFieldsToQuery(tableHeaders))
+
+	return (
+		gql`
+            query QUERY_VIEW( $Id: ID! ){
+                ${detailSchemaKey} ( Id: $Id ){            
+                    ${queryItems}
+                }
+            }
+        `
+	)
+}
+
+
+// export function mutatePlayerAccessLog() {
+//     const queryTypes = String(GetQueryMeta('getEntityTypes', tableHeaders))
+//     const queryEntities = String(GetQueryMeta('getEntityFilters', tableHeaders))
+//     const queryItems = String(SelectFieldsToMutate(tableHeaders))
+
+//     return (
+//         gql`
+//             mutation MUTATION_VARS(
+//                ${queryTypes}
+//             ){
+//                 ${mutateSchemaKey}(
+//                     entity:{
+//                         ${queryEntities}
+//                     }
+//                 ){
+//                     ${queryItems}
+//                 }
+//             }
+//         `
+//     )
+// }
+
+// export function getExtraQuery() {
+//     return (
+//         gql`
+//             query EXTRAQUERY_VIEW { 
+                
+//             }
+//         `
+//     )
+// }

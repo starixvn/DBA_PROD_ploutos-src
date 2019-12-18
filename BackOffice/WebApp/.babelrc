@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["react"], ["env"]
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread", 
+    "babel-plugin-transform-class-properties", 
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
+}
