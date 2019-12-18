@@ -80,6 +80,7 @@ class PlayerProfileInfo extends Component {
 							<dt>Mobile No</dt><dd>{(this.props.handleElementAccess('FieldPlayerMobile')) ? playerProfile.MobileNo : '*****' }</dd>
 							<dt>Is Email Verified</dt><dd>{(playerProfile.IsEmailVerified) ? <i className="fa fa-check fa-lg"></i> : <i className="fa fa-close fa-lg"></i>}</dd>
 							<dt>Is Mobile Verified</dt><dd>{(playerProfile.IsMobileVerified) ? <i className="fa fa-check fa-lg"></i> : <i className="fa fa-close fa-lg"></i>}</dd>
+							<dt>Is BO Verified</dt><dd>{(playerProfile.IsVerified) ? <i className="fa fa-check fa-lg"></i> : <i className="fa fa-close fa-lg"></i>}</dd>
 							<dt>WeChat Username</dt><dd>{playerProfile.WebChatUserName}</dd>
 							<dt>QQ Username</dt><dd>{playerProfile.QQUserName}</dd>
 							<dt>KaKao Talk ID</dt><dd>{playerProfile.KakaoTalkId}</dd>

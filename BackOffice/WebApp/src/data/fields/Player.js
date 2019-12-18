@@ -2167,6 +2167,34 @@ export const Profile = [
 		}
 	},
 	{
+		'field': 'IsVerified',
+		'title': 'Is BO Verified?',
+		'type': 'boolean',
+		'boolOptions': ['True', 'False'],
+		'searchType': 'checkbox',
+		'searchOptions': BoolOpts('yes'),
+		'searchExpression': 'EQUALS',
+		'varType': 'Boolean',
+		'hidden': {
+			'searchFieldSelection': false,
+			'tableColumnSelection': false,
+			'list': true,
+			'detail': false,
+			'form': {
+				'search': true,
+				'add': true,
+				'edit': true
+			}
+		},
+		'form': {
+			'defaultValue': '',
+			'readOnly': {
+				'add': false,
+				'edit': false
+			}
+		}
+	},
+	{
 		'field': 'IPAddress',
 		'title': 'IP Address',
 		'varType': 'String',
