@@ -40,7 +40,7 @@ class SingleSignOnField extends AbstractContainerAwareField
             'timeout' => 120.0,
         ]);
         
-        $gitter = $client->request('POST', '/pagcor-auth/v1/sso-authorize?response_type='.$tokenGeneratorResponseType.'&client_id='.$tokenGeneratorClientId.'&client_secret='.$tokenGeneratorClientSecret, [
+        $gitter = $client->request('POST', '/pagcor-auth/v1/authorize?response_type='.$tokenGeneratorResponseType.'&client_id='.$tokenGeneratorClientId.'&client_secret='.$tokenGeneratorClientSecret, [
             'headers' => [
                 'X-SSO-User' => $this->container->get('security.token_storage')->getToken()->getUser()->getUsername()
             ]
