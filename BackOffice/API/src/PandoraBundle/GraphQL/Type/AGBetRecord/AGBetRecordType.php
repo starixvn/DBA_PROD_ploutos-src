@@ -1,0 +1,20 @@
+<?php
+/**
+ * This file is a part of GraphQL project.
+ *
+ * @author Alexandr Viniychuk <a@viniychuk.com>
+ * created: 4/23/17 11:05 PM
+ */
+
+namespace PandoraBundle\GraphQL\Type\AGBetRecord;
+
+use Youshido\GraphQL\Type\Object\AbstractObjectType;
+use PandoraBundle\Joinery\AGBetRecordJoinery;
+
+class AGBetRecordType extends AbstractObjectType
+{
+    public function build($config)
+    {
+        $config->addFields(AGBetRecordJoinery::fields());
+    }
+}

@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: utils/CoreHelpers.js | Blueberry Dev Docs</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">Blueberry Dev Docs</a></h1>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CoreHelpers.html">CoreHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers.html#.BoolOpts">BoolOpts</a></li><li><a href="module-CoreHelpers.html#.camelCaseToWords">camelCaseToWords</a></li><li><a href="module-CoreHelpers.html#.FormatCurrency">FormatCurrency</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToQuery">GetAllFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToView">GetAllFieldsToView</a></li><li><a href="module-CoreHelpers.html#.GetInitLimitValue">GetInitLimitValue</a></li><li><a href="module-CoreHelpers.html#.GetInitOffsetValue">GetInitOffsetValue</a></li><li><a href="module-CoreHelpers.html#.GetInitSearchValue">GetInitSearchValue</a></li><li><a href="module-CoreHelpers.html#.GetLocalData">GetLocalData</a></li><li><a href="module-CoreHelpers.html#.GetQueryMeta">GetQueryMeta</a></li><li><a href="module-CoreHelpers.html#.isObject">isObject</a></li><li><a href="module-CoreHelpers.html#.isObjectEmpty">isObjectEmpty</a></li><li><a href="module-CoreHelpers.html#.QueryParsefy">QueryParsefy</a></li><li><a href="module-CoreHelpers.html#.QueryStringify">QueryStringify</a></li><li><a href="module-CoreHelpers.html#.RemoveLocalData">RemoveLocalData</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToMutate">SelectFieldsToMutate</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToQuery">SelectFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToSearch">SelectFieldsToSearch</a></li><li><a href="module-CoreHelpers.html#.SetLocalData">SetLocalData</a></li></ul></div></li><li><a href="module-FormHelpers.html">FormHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:FormHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-FormHelpers.html#.filterOptionList">filterOptionList</a></li><li><a href="module-FormHelpers.html#.formHeaderTemplate">formHeaderTemplate</a></li><li><a href="module-FormHelpers.html#.getInputFields">getInputFields</a></li><li><a href="module-FormHelpers.html#.inputChange">inputChange</a></li><li><a href="module-FormHelpers.html#.inputField">inputField</a></li><li><a href="module-FormHelpers.html#.inputLabel">inputLabel</a></li><li><a href="module-FormHelpers.html#.isFieldEnum">isFieldEnum</a></li><li><a href="module-FormHelpers.html#.isFieldRequired">isFieldRequired</a></li><li><a href="module-FormHelpers.html#.selectChange">selectChange</a></li><li><a href="module-FormHelpers.html#.selectEnumChange">selectEnumChange</a></li><li><a href="module-FormHelpers.html#.shouldSubmit">shouldSubmit</a></li><li><a href="module-FormHelpers.html#.submitForm">submitForm</a></li></ul></div></li><li><a href="module-ResponseHandlers.html">ResponseHandlers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ResponseHandlers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ResponseHandlers.html#.ErrorHandler">ErrorHandler</a></li><li><a href="module-ResponseHandlers.html#.SuccessHandler">SuccessHandler</a></li></ul></div></li><li><a href="module-SearchHelpers.html">SearchHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SearchHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SearchHelpers.html#.changeFields">changeFields</a></li><li><a href="module-SearchHelpers.html#.resetSearch">resetSearch</a></li><li><a href="module-SearchHelpers.html#.submitSearch">submitSearch</a></li></ul></div></li><li><a href="module-TableHelpers.html">TableHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:TableHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-TableHelpers.html#.changeColumns">changeColumns</a></li><li><a href="module-TableHelpers.html#.changeLimit">changeLimit</a></li><li><a href="module-TableHelpers.html#.changePage">changePage</a></li><li><a href="module-TableHelpers.html#.changeSort">changeSort</a></li><li><a href="module-TableHelpers.html#.toggleViewRecord">toggleViewRecord</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Namespaces</h3><ul><li><a href="module-CoreHelpers-DocCookies.html">CoreHelpers~DocCookies</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers~DocCookies_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers-DocCookies.html#.getItem">getItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.hasItem">hasItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.removeItem">removeItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.setItem">setItem</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#_initSearchQueryStates">_initSearchQueryStates</a></li><li><a href="global.html#AUTOBAHNJS_DEBUG">AUTOBAHNJS_DEBUG</a></li><li><a href="global.html#AUTOBAHNJS_VERSION">AUTOBAHNJS_VERSION</a></li><li><a href="global.html#errResponse">errResponse</a></li><li><a href="global.html#isActionVisibile">isActionVisibile</a></li><li><a href="global.html#successResponse">successResponse</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import queryString from 'query-string'
+
+/** @module CoreHelpers */
+
+
+const pageAction = GetLocalData('pageAction', 'add') // ADD DEFAULT VALUE IN CASE NO VALUE HAS FOUND OR NOT-SET
+
+/**
+ * Manage Cookies
+ * @namespace DocCookies
+ * @author Kim
+ */
+export const DocCookies = {
+	/* eslint-disable no-useless-escape */
+
+	/**
+	* Get Cookie Item
+	* @param {String} sKey Key
+	* @returns {String} value
+	*/
+	getItem: function (sKey) {
+		return decodeURIComponent(document.cookie.replace(new RegExp('(?:(?:^|.*;)\\s*' + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, '\\$&amp;') + '\\s*\\=\\s*([^;]*).*$)|^.*$'), '$1')) || null
+	},
+
+	/**
+	* Set Cookie Item
+	* @param {String} sKey Key
+	* @param {String} sValue Key
+	* @param {String} vEnd Key
+	* @param {String} sPath Key
+	* @param {String} sDomain Key
+	* @param {String} bSecure Key
+	* @returns {Boolean} True/False
+	*/
+	setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+		if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false }
+		var sExpires = ''
+		if (vEnd) {
+			switch (vEnd.constructor) {
+			case Number:
+				sExpires = vEnd === Infinity ? '; expires=Fri, 31 Dec 9999 23:59:59 GMT' : '; max-age=' + vEnd
+				break
+			case String:
+				sExpires = '; expires=' + vEnd
+				break
+			case Date:
+				sExpires = '; expires=' + vEnd.toUTCString()
+				break
+			}
+		}
+		document.cookie = encodeURIComponent(sKey) + '=' + encodeURIComponent(sValue) + sExpires + (sDomain ? '; domain=' + sDomain : '') + (sPath ? '; path=' + sPath : '') + (bSecure ? '; secure' : '')
+		return true
+	},
+	/**
+	* Remove Cookie Item
+	* @param {String} sKey Key
+	* @param {String} sPath Path
+	* @param {String} sDomain Domain
+	* @returns {Boolean} True/False
+	*/
+	removeItem: function (sKey, sPath, sDomain) {
+		if (!sKey || !this.hasItem(sKey)) { return false }
+		document.cookie = encodeURIComponent(sKey) + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT' + ( sDomain ? '; domain=' + sDomain : '') + ( sPath ? '; path=' + sPath : '')
+		return true
+	},
+	/**
+	* Check Cookie Existence
+	* @param {String} sKey Key
+	* @returns {Boolean} True/False
+	*/
+	hasItem: function (sKey) {
+		return (new RegExp('(?:^|;\\s*)' + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, '\\$&amp;') + '\\s*\\=')).test(document.cookie)
+	},
+	/* eslint-enable no-useless-escape */
+}
+
+/**
+ * Get LocalStorage data by Key
+ * 
+ * @param {String} key Key to look for
+ * @param {String} defaultValue Default Value if Key is non-existent
+ * @returns {String} Value
+ * @author Kim
+ */
+export function GetLocalData(key, defaultValue) {
+	var item = localStorage.getItem(key)
+	return (item) ? item : defaultValue
+}
+
+/**
+ * Set LocalStorage data by Key
+ * 
+ * @param {String} key Key to Set
+ * @param {String} value Value to Set
+ * @returns {String} Value
+ * @author Kim
+ */
+export function SetLocalData(key, value) {
+	localStorage.setItem(key, value)
+	return value
+}
+
+/**
+ * Remove LocalStorage data by Key
+ * 
+ * @param {String} key Key to Remove
+ * @returns {null} Null
+ * @author Kim
+ */
+export function RemoveLocalData(key) {
+	localStorage.removeItem(key)
+	return
+}
+
+/**
+ * Format Currency for Display
+ * 
+ * @param {String} value Value
+ * @param {String} scale Scale
+ * @returns {String} Formatted value
+ * @author Kim
+ */
+export function FormatCurrency(value, scale) {
+	let scaleInp = scale ? scale : 3
+	return Number(value).toLocaleString(undefined, { minimumFractionDigits: scaleInp })
+}
+
+/**
+ * Convert Search Object to String Params
+ * 
+ * @requires queryString
+ * @param {Object} fields Search Object parameter/s
+ * @returns {String} Formatted search string
+ * @author Jonathan
+ */
+export function QueryStringify(fields) {
+	return queryString.stringify(fields)
+}
+
+/**
+ * Convert Search String Params to Object
+ * 
+ * @requires queryString
+ * @param {String} query String Search parameter/s
+ * @returns {Object} Formated object
+ * @author Jonathan
+ */
+export function QueryParsefy(query) {
+	return queryString.parse(query)
+}
+
+/**
+ * Get Initial Search Values on Page Load
+ * 
+ * @param {String} query String Search parameter/s
+ * @param {String} field Field to match
+ * @param {String} initVal Initial value if actual value is non-existent
+ * @returns {String} Value
+ * @author Jonathan
+ */
+export function GetInitSearchValue(query, field, initVal) {
+	const q = query !== '' &amp;&amp; QueryParsefy(query)
+	return q ? (q[field] !== undefined ? q[field] : initVal) : initVal
+}
+
+/**
+ * Get Initial Table Limit on Page Load from LocalStorage
+ * 
+ * @default 10
+ * @returns {String} Limit Value
+ * @author Jonathan
+ */
+export function GetInitLimitValue() {
+	return GetLocalData('setListLimit') ? GetLocalData('setListLimit') : 10
+}
+
+/**
+ * Get Initial Offset Value on Page Load
+ * 
+ * @default 0
+ * @param {String} pn Page Number
+ * @returns {String} List Offset Value
+ * @author Jonathan
+ */
+export function GetInitOffsetValue(pn) {
+	return (pn &amp;&amp; pn !== '0') ? (pn - 1) * GetInitLimitValue() : 0
+}
+
+/**
+ * Get Query Metas
+ * 
+ * @param {String} asType Type of Meta to query
+ * @param {String} tableHeaders Data fields
+ * @param {String} componentName Current Component Name
+ * @param {String} searchQuery Search Query
+ * @returns {any} Any
+ * @author Jonathan
+ */
+export function GetQueryMeta(asType, tableHeaders, componentName, searchQuery) {
+	const currFields = GetLocalData(`sfld_${componentName}`)
+	const source = !currFields ? tableHeaders : JSON.parse(currFields)
+
+	if (asType === 'getTypes') {
+		let types = []
+		source.forEach(th => { 
+			const varType = !currFields
+				? `${th.varType}`
+				: (tableHeaders.find(t => t.field === th.field)).varType
+			const entry = `$${th.field}: ${varType}`
+			
+			!currFields
+				? (
+					th.searchDefault || //&amp;&amp; types.push(entry)
+					th.hidden !== undefined &amp;&amp; (th.hidden.form.search !== undefined &amp;&amp; th.hidden.form.search === false)) &amp;&amp; types.push(entry)
+				: types.push(entry)
+			
+			if (th.expression === 'BETWEEN') types.push(`$${th.field}1: ${varType}`)
+		})
+		return types
+	}
+
+	if (asType === 'getFilters') {
+		let filters = {}
+		source.forEach(th => {
+			const field = th.field
+			const expression = !currFields ? th.searchExpression : th.expression
+			const entry = {
+				parameter: `$${field}`,
+				expression: expression !== undefined ? expression : (th.searchType === 'select' ? 'EQUALS' : 'CONTAINS')
+			}
+
+			!currFields
+				? (
+					th.searchDefault || //&amp;&amp; (filters[field] = entry)
+					th.hidden !== undefined &amp;&amp; (th.hidden.form.search !== undefined &amp;&amp; th.hidden.form.search === false)) &amp;&amp; (filters[field] = entry)
+				: (filters[field] = entry)
+
+			if (expression === 'BETWEEN') entry['parameter_one'] = `$${field}1`
+
+		})
+		return JSON.stringify(filters).replace(/"/g,'')
+	}
+
+	if (asType === 'getQueryVariables') {
+		let variables = {}
+
+		source.forEach(s => {
+			const field = s.field
+
+			const varType = !currFields
+				? `${s.varType}`
+				: (tableHeaders.find(t => t.field === s.field)).varType
+
+			const isEnum = /Enum*/g.test(varType)
+
+			const checkValue = type => {
+				switch (type) {
+				case 'Boolean': return null
+				case 'Int': case 'Int!': return 0
+				case 'String':
+				case 'String!':
+				case 'ID': 
+				case 'ID!':
+				case 'DateTime': return null
+				default: return null
+				}
+			} 
+			const initVal = isEnum ? null : checkValue(varType)
+			const value = GetInitSearchValue(searchQuery, field, initVal)
+			const boolValues = ['true', 'false']
+
+			!currFields
+				? (
+					s.searchDefault || // &amp;&amp; (variables[field] = value )
+					s.hidden !== undefined &amp;&amp; (s.hidden.form.search !== undefined &amp;&amp; s.hidden.form.search === false)) &amp;&amp; (variables[field] = value)
+				: variables[field] = boolValues.includes(value) ? !value : value
+
+			if (s.expression === 'BETWEEN') variables[`${field}1`] = GetInitSearchValue(searchQuery, `${field}1`, initVal) 
+		})
+		return variables
+	}
+
+	if (asType === 'getEntityTypes') {
+		let filters = []
+		source.forEach(th => { 
+			const entry = `$${th.field}: ${th.varType}`
+			// if (th.showFormDefault || th.isRequired) filters.push(entry) // || th.isRequired
+			if (
+				th.showFormDefault ||
+				( th.hidden !== undefined &amp;&amp; ((pageAction === 'add' &amp;&amp; !th.hidden.form.add) || (pageAction === 'edit' &amp;&amp;!th.hidden.form.edit)) )
+				|| th.isRequired
+			) {
+				filters.push(entry)
+			}
+		}) 
+		return filters
+	}
+
+	if (asType === 'getEntityFilters') {
+		let filters = []
+		source.forEach(th => { 
+			const entry = `${th.field}: $${th.field}`
+
+			// if (th.showFormDefault || th.isRequired) filters.push(entry) // || th.isRequired
+			if (
+				th.showFormDefault ||
+				( th.hidden !== undefined &amp;&amp; ((pageAction === 'add' &amp;&amp; !th.hidden.form.add) || (pageAction === 'edit' &amp;&amp;!th.hidden.form.edit)) )
+				|| th.isRequired
+			) {
+				filters.push(entry)
+			}
+		}) 
+		return filters
+	}
+
+	// if (asType === 'getEntityFormFields') {
+	// 	let fieldsToQuery = []
+	// 	tableHeaders.forEach(th => {
+	// 		const type = th.searchType
+	// 		if (
+	// 			(th.showFormDefault !== undefined &amp;&amp; th.showFormDefault) 
+	// 			// ||
+	// 			// th.hidden !== undefined &amp;&amp; (!th.hidden.form.add || !th.hidden.form.edit)
+	// 		) {
+	// 			fieldsToQuery.push({
+	// 				field: th.field,
+	// 				title: th.title,
+	// 				type: type !== undefined ? type : 'text'
+	// 			})
+	// 		}
+	// 	})
+	// 	return fieldsToQuery
+	// }
+
+}
+
+/**
+ * Select Fields To Display on Search Filter Component
+ * 
+ * @param {String} tableHeaders Data fields
+ * @param {String} componentName Current Component Name
+ * @returns {Object[]} Array of object fields
+ * @author Jonathan
+ */
+export function SelectFieldsToSearch(tableHeaders, componentName) {
+	const currFields = GetLocalData(`sfld_${componentName}`)
+	const source = !currFields ? tableHeaders : JSON.parse(currFields)
+
+	if (!currFields) {
+		let fieldsToSearch = []
+		source.forEach(th => {
+			const expression = th.searchExpression
+			const searchType = th.searchType
+
+			if (th.field !== '' &amp;&amp; 
+				(th.searchDefault !== undefined &amp;&amp; th.searchDefault) ||
+				(th.hidden !== undefined &amp;&amp; (th.hidden.form.search !== undefined &amp;&amp; th.hidden.form.search === false) )
+			) {
+				fieldsToSearch.push({
+					field: th.field,
+					title: th.title,
+					searchType: searchType !== undefined ? searchType : 'text',
+					expression: expression !== undefined ? expression : (th.searchType === 'select' ? 'EQUALS' : 'CONTAINS')
+				})
+			}
+		})
+		return fieldsToSearch
+	}
+	return source
+}
+
+/**
+ * Select Fields To Pass to GraphQl Query 
+ * (e.g. For Table Listing's custom column selection)
+ * 
+ * @param {String} tableHeaders Data fields
+ * @param {String} componentName Current Component Name
+ * @returns {Object[]} Array of object fields
+ * @author Jonathan
+ */
+export function SelectFieldsToQuery(tableHeaders, componentName) {
+	const currFields = GetLocalData(`fld_${componentName}`)
+	
+	if (!currFields) {
+		// Map fields to show default visible columns
+		let fieldsToQuery = []
+		tableHeaders.forEach(th => {
+			if (
+				th.field !== '' 
+				&amp;&amp; (
+					(th.showDefault !== undefined &amp;&amp; th.showDefault) 
+					|| ( th.hidden !== undefined &amp;&amp; !th.hidden.list )
+					|| th.isRequired
+				)
+			) {
+				fieldsToQuery.push(th.field)
+			}
+		})
+		return fieldsToQuery
+	} else {
+		// Add isRequired fields to selected table columns
+		let fieldsToQuery = currFields.split(',')
+		tableHeaders.forEach(th => th.isRequired &amp;&amp; fieldsToQuery.push(th.field))
+		return fieldsToQuery
+	}
+}
+
+/**
+ * Select Fields To Pass for GraphQl Mutation
+ * 
+ * @param {String} tableHeaders Data fields
+ * @returns {Object[]} Array of object fields
+ * @author Jonathan
+ */
+export function SelectFieldsToMutate(tableHeaders) {
+	let fieldsToMutate = []
+	tableHeaders.forEach(th => {
+		if (
+			// ( th.showFormDefault !== undefined &amp;&amp; th.showFormDefault ) || // &amp;&amp; th.isRequired // TODO delete line		
+			( th.showFormDefault !== undefined &amp;&amp; th.showFormDefault ) || 
+			th.hidden !== undefined &amp;&amp; ((pageAction === 'add' &amp;&amp; !th.hidden.form.add) || (pageAction === 'edit' &amp;&amp;!th.hidden.form.edit))
+		) {
+			fieldsToMutate.push(th.field)
+		}
+	})
+	return fieldsToMutate
+}
+
+/**
+ * Get All Fields To Pass to GraphQl Query
+ * (Except with empty fields value)
+ * 
+ * @param {String} tableHeaders Data fields
+ * @returns {Object[]} Array of object fields
+ * @author Jonathan
+ */
+export function GetAllFieldsToQuery(tableHeaders) {
+	let fieldsToQuery = []
+	tableHeaders.forEach(th => (th.field !== '') &amp;&amp; fieldsToQuery.push(th.field))
+	return fieldsToQuery
+}
+
+/**
+ * Get All Fields To Pass to GraphQl Query
+ * (Except with empty fields value)
+ * 
+ * @param {String} tableHeaders Data fields
+ * @returns {Object[]} Array of Reshaped object fields
+ * @author Jonathan
+ */
+export function GetAllFieldsToView(tableHeaders) {
+	let fieldsToView = []
+	tableHeaders.forEach(th => {
+		// IF th.field is NOT empty and th.hidden is undefined, OR
+		// IF th.hidden is NOT undefined and its value is false
+		// THEN push to array variable 'fieldsToView'
+		if ((th.field !== '' &amp;&amp; th.hidden === undefined) || (th.hidden !== undefined &amp;&amp; !th.hidden.detail)) {
+			fieldsToView.push({
+				'field': th.field,
+				'title': th.title,
+				'type': th.type,
+				'link': th.link,
+				'params': th.params
+			})
+		}
+	})
+	return fieldsToView
+}
+
+/**
+ * Check if passed object is really an Object
+ * 
+ * @param {Object} obj Sample object
+ * @returns {Boolean} True or False
+ * @author Jonathan
+ */
+export function isObject(obj) {
+	return (!!obj) &amp;&amp; (obj.constructor === Object)
+}
+
+/**
+ * Check if passed object is empty
+ * 
+ * @param {Object} obj Sample object
+ * @returns {Boolean} True or False
+ * @author Jonathan
+ */
+export function isObjectEmpty(obj) {
+	return (Object.keys(obj).length === 0)
+}
+
+/**
+ * Convert camel-cased string to separate words
+ * 
+ * @param {String} camelCase Sample string
+ * @returns {String} Converted string
+ * @author Kim
+ */
+export function camelCaseToWords(camelCase) {
+	return camelCase.replace(/([A-Z])/g, function(match) {
+		return ' ' + match
+	}).replace(/^./, function(match) {
+		return match.toUpperCase()
+	})
+}
+
+/**
+ * Return appropriate boolean field options
+ * 
+ * @param {String} type Type of Boolean options
+ * @returns {Object[]} Array of objects
+ * @author Jonathan
+ */
+export function BoolOpts(type) {
+	switch (type) {
+	case 'yes':
+		return [{
+			name: 'Yes',
+			value: true
+		},
+		{
+			name: 'No',
+			value: false
+		}
+		]
+	case 'active':
+		return [{
+			name: 'Active',
+			value: true
+		},
+		{
+			name: 'Inactive',
+			value: false
+		}
+		]
+	}
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">Copyright 2018</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

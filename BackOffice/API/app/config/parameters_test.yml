@@ -1,0 +1,23 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: dev_pandora_api_manager_db
+    database_user: root
+    database_password: rollbasector24
+    
+    database_host_pandora: 127.0.0.1
+    database_port_pandora: null
+    database_name_pandora: dev_pandora_com_db_v2
+    database_user_pandora: root
+    database_password_pandora: rollbasector24
+    
+#    database_host_pandora: 116.93.120.107
+#    database_port_pandora: null
+#    database_name_pandora: PandoraDb
+#    database_user_pandora: pandoraapimanageruser
+#    database_password_pandora: Ap1mGrU53r$$
+    
+    pandora_api_endpoint: 'http://uat.beachheadsolutionsinc.com'
+    pandora_api_token: 7d75462b-9de6-4018-8b80-422085161ab0-8e4764be-e19e-4a4a-aad8-90724ea80c9f
+    affiliate_api_endpoint: 'http://uat.beachheadsolutionsinc.com:8083'
+    affiliate_api_token: 7d75462b-9de6-4018-8b80-422085161ab0-8e4764be-e19e-4a4a-aad8-90724ea80c9f

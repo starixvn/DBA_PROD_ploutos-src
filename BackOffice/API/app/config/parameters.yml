@@ -1,0 +1,47 @@
+# This file is auto-generated during the composer install
+parameters:
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: kgutierrez@citronsolutions.com
+    mailer_password: rollbasector24
+    secret: H0llyM0ll1
+    jwt_private_key_path: '%kernel.root_dir%/../var/jwt/private.pem'
+    jwt_public_key_path: '%kernel.root_dir%/../var/jwt/public.pem'
+    jwt_key_pass_phrase: pandora
+    jwt_token_ttl: 7200
+    file_upload_size: 6000000
+    file_upload_location: /var/storage/private/
+    file_upload_valid_extensions:
+        - xlsx
+        - xls
+        - ods
+        - png
+        - jpg
+        - jpeg
+        - gif
+        - doc
+        - docx
+    webscoket_host: 127.0.0.1
+    webscoket_port: 8585
+    tcp_host: 127.0.0.1
+    tcp_port: 8484
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    database_host_pandora: 127.0.0.1
+    database_port_pandora: null
+    database_name_pandora: symfony
+    database_user_pandora: root
+    database_password_pandora: null
+    pandora_api_endpoint: null
+    pandora_api_token: null
+    affiliate_api_endpoint: null
+    affiliate_api_token: null
+    single_sign_on_token_generator: null
+    single_sign_on_response_type: null
+    single_sign_on_client_secret: null
+    single_sign_on_client_id: null
+    pagcor_athena_portal: null
+    cms_management: null

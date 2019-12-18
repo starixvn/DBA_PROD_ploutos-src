@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: views/Components/PaymentManager/Withdrawal/Withdrawal.actions.js | Blueberry Dev Docs</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">Blueberry Dev Docs</a></h1>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CoreHelpers.html">CoreHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers.html#.BoolOpts">BoolOpts</a></li><li><a href="module-CoreHelpers.html#.camelCaseToWords">camelCaseToWords</a></li><li><a href="module-CoreHelpers.html#.FormatCurrency">FormatCurrency</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToQuery">GetAllFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.GetAllFieldsToView">GetAllFieldsToView</a></li><li><a href="module-CoreHelpers.html#.GetInitLimitValue">GetInitLimitValue</a></li><li><a href="module-CoreHelpers.html#.GetInitOffsetValue">GetInitOffsetValue</a></li><li><a href="module-CoreHelpers.html#.GetInitSearchValue">GetInitSearchValue</a></li><li><a href="module-CoreHelpers.html#.GetLocalData">GetLocalData</a></li><li><a href="module-CoreHelpers.html#.GetQueryMeta">GetQueryMeta</a></li><li><a href="module-CoreHelpers.html#.isObject">isObject</a></li><li><a href="module-CoreHelpers.html#.isObjectEmpty">isObjectEmpty</a></li><li><a href="module-CoreHelpers.html#.QueryParsefy">QueryParsefy</a></li><li><a href="module-CoreHelpers.html#.QueryStringify">QueryStringify</a></li><li><a href="module-CoreHelpers.html#.RemoveLocalData">RemoveLocalData</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToMutate">SelectFieldsToMutate</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToQuery">SelectFieldsToQuery</a></li><li><a href="module-CoreHelpers.html#.SelectFieldsToSearch">SelectFieldsToSearch</a></li><li><a href="module-CoreHelpers.html#.SetLocalData">SetLocalData</a></li></ul></div></li><li><a href="module-FormHelpers.html">FormHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:FormHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-FormHelpers.html#.filterOptionList">filterOptionList</a></li><li><a href="module-FormHelpers.html#.formHeaderTemplate">formHeaderTemplate</a></li><li><a href="module-FormHelpers.html#.getInputFields">getInputFields</a></li><li><a href="module-FormHelpers.html#.inputChange">inputChange</a></li><li><a href="module-FormHelpers.html#.inputField">inputField</a></li><li><a href="module-FormHelpers.html#.inputLabel">inputLabel</a></li><li><a href="module-FormHelpers.html#.isFieldEnum">isFieldEnum</a></li><li><a href="module-FormHelpers.html#.isFieldRequired">isFieldRequired</a></li><li><a href="module-FormHelpers.html#.selectChange">selectChange</a></li><li><a href="module-FormHelpers.html#.selectEnumChange">selectEnumChange</a></li><li><a href="module-FormHelpers.html#.shouldSubmit">shouldSubmit</a></li><li><a href="module-FormHelpers.html#.submitForm">submitForm</a></li></ul></div></li><li><a href="module-ResponseHandlers.html">ResponseHandlers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ResponseHandlers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ResponseHandlers.html#.ErrorHandler">ErrorHandler</a></li><li><a href="module-ResponseHandlers.html#.SuccessHandler">SuccessHandler</a></li></ul></div></li><li><a href="module-SearchHelpers.html">SearchHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SearchHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SearchHelpers.html#.changeFields">changeFields</a></li><li><a href="module-SearchHelpers.html#.resetSearch">resetSearch</a></li><li><a href="module-SearchHelpers.html#.submitSearch">submitSearch</a></li></ul></div></li><li><a href="module-TableHelpers.html">TableHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:TableHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-TableHelpers.html#.changeColumns">changeColumns</a></li><li><a href="module-TableHelpers.html#.changeLimit">changeLimit</a></li><li><a href="module-TableHelpers.html#.changePage">changePage</a></li><li><a href="module-TableHelpers.html#.changeSort">changeSort</a></li><li><a href="module-TableHelpers.html#.toggleViewRecord">toggleViewRecord</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Namespaces</h3><ul><li><a href="module-CoreHelpers-DocCookies.html">CoreHelpers~DocCookies</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CoreHelpers~DocCookies_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CoreHelpers-DocCookies.html#.getItem">getItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.hasItem">hasItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.removeItem">removeItem</a></li><li><a href="module-CoreHelpers-DocCookies.html#.setItem">setItem</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#_initSearchQueryStates">_initSearchQueryStates</a></li><li><a href="global.html#AUTOBAHNJS_DEBUG">AUTOBAHNJS_DEBUG</a></li><li><a href="global.html#AUTOBAHNJS_VERSION">AUTOBAHNJS_VERSION</a></li><li><a href="global.html#errResponse">errResponse</a></li><li><a href="global.html#isActionVisibile">isActionVisibile</a></li><li><a href="global.html#successResponse">successResponse</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import { Row, Col, Label, Input } from 'reactstrap'
+
+// import SelectSearch from '../../../../components/SelectSearch'
+import { SuccessHandler, ErrorHandler } from '../../../../utils/ResponseHandler'
+
+
+export function actions(data, context, props) {
+	return ([
+		{
+			task: data.TransactionGrabId !== null ?  'Ungrab' : 'Grab',
+			action: 'grab',
+			icon: data.TransactionGrabId !== null ? 'hand-lizard-o' : 'hand-grab-o',
+			isVisible: isActionVisibile('Requested,Cleared,Uncleared,Fraud_Processing', 'grab', 'actionTransactionGrabUnGrabMutation', data, context),
+			color: data.TransactionGrabId !== null ?  'warning' : 'success',
+			method: function() {
+				props.grabUngrabMutation({
+					variables: {
+						TransactionId: data.TransactionGrabId || 0,
+						SourceObjectId: data.Id,
+
+						TransactionType: 'Walletwithdrawals',
+						Assignee: context.userInfo.userName,
+						UserId: context.userInfo.userId
+					}
+				})
+					.then(() => props.data.refetch())
+					.catch(error => ErrorHandler({ 
+						context: context,
+						error: { error } 
+					})
+					)
+			}
+		},
+		{
+			task: 'Approve',
+			action: 'approve',
+			icon: 'thumbs-up',
+			isVisible: isActionVisibile('Requested,Cleared', 'approve', 'actionApproveWalletWithdrawalMutation', data, context)
+		},
+		{
+			task: 'Reject',
+			action: 'reject',
+			icon: 'thumbs-down',
+			isVisible: isActionVisibile('Requested,Uncleared', 'reject', 'actionRejectWalletWithdrawalMutation', data, context)
+		},
+		{
+			task: 'Unclear',
+			action: 'unclear',
+			icon: 'random',
+			isVisible: isActionVisibile('Processing,Fraud_Processing', 'unclear', 'actionUnClearWalletWithdrawalMutation', data, context)        
+		},
+		{
+			task: 'Clear',
+			action: 'clear',
+			icon: 'times-circle',
+			isVisible: isActionVisibile('Processing,Fraud_Processing', 'clear', 'actionClearWalletWithdrawalMutation', data, context)        
+		},
+		{
+			task: 'For Fraud',
+			action: 'for_fraud',
+			icon: 'exclamation',
+			isVisible: isActionVisibile('Requested', 'for_fraud', 'actionForFraudWalletWithdrawalMutation', data, context)
+		}
+	])
+}
+
+export function renderModalContent(v) {
+
+	const data = v.props.data.walletWithdrawal[0]
+	// const bankAccountList = v.props.extradata.bankAccountList.items   
+
+	let withdrawalId = data.Id || 0
+	let withdrawalBankAccountId = data.WithdrawalBankAccountId
+	let transactionGrabId = data.TransactionGrabId || 0
+	let comment = data.Remarks || ''
+
+
+	// MODAL CONTENT PER ACTION
+	switch (v.action) {
+	case 'approve': return (
+		&lt;Row>
+			&lt;Col xs="12">&lt;h5>Approve&lt;/h5>&lt;/Col>
+			&lt;Col xs="12">
+				&lt;Label htmlFor="WithdrawalBankAccountId" className="my-2">Withdrawal Bank Account (*)&lt;/Label>
+				&lt;Input
+					type="select"
+					name="roles"
+					size="sm"
+					defaultValue={withdrawalBankAccountId}
+					onChange={e => (withdrawalBankAccountId = e.target.value)}>
+					{
+						v.props.extradata.bankAccountList.items.map(v => (
+							&lt;option key={v.Id} value={v.Id}>{v.AccountNo}&lt;/option>
+						))
+					}
+				&lt;/Input>
+				{/* &lt;SelectSearch 
+					type="select"
+					searchKey={{ value: 'Id', label: 'AccountNo', variables: '' }}
+					searchQuery={bankAccountList}  
+					searchValue={withdrawalBankAccountId}
+					searchOnChange={e => {
+						console.log(e.target.value)
+						withdrawalBankAccountId = e.target.value
+					}
+					}
+				/> */}
+			&lt;/Col>            
+			&lt;Col xs="12">
+				&lt;Label htmlFor="Remarks" className="my-2">Remarks&lt;/Label>
+				&lt;Input type="textarea" name="Remarks" 
+					id="Remarks" 
+					onChange={e => (comment = e.target.value)}
+				/>
+			&lt;/Col>
+			&lt;Col xs="12">                
+				&lt;button type="submit" 
+					className="btn btn-sm btn-primary mt-2" 
+					onClick={approveWithdrawal.bind(this)}>
+                        Approve
+				&lt;/button>
+			&lt;/Col>
+		&lt;/Row>
+	)
+	case 'reject': return (
+		&lt;Row>
+			&lt;Col xs="12">&lt;h5>Reject&lt;/h5>&lt;/Col>
+			&lt;Col xs="12">
+				&lt;Label htmlFor="Remarks" className="my-2">Remarks (*)&lt;/Label>
+				&lt;Input type="textarea" name="Remarks" 
+					id="Remarks" 
+					onChange={e => (comment = e.target.value)}
+				/>
+			&lt;/Col>
+			&lt;Col xs="12">
+				&lt;button type="submit" 
+					className="btn btn-sm btn-primary mt-2"                    
+					onClick={rejectWithdrawal.bind(this)}
+				>
+                        Reject
+				&lt;/button>
+			&lt;/Col>
+		&lt;/Row>        
+	)
+	case 'unclear': return (
+		&lt;Row>
+			&lt;Col xs="12">&lt;h5>Unclear&lt;/h5>&lt;/Col>
+			&lt;Col xs="12">
+				&lt;Label htmlFor="Remarks" className="my-2">Remarks&lt;/Label>
+				&lt;Input type="textarea" name="Remarks" 
+					id="Remarks" 
+					onChange={e => (comment = e.target.value)}
+				/>
+			&lt;/Col>
+			&lt;Col xs="12">
+				&lt;button type="submit" 
+					className="btn btn-sm btn-primary mt-2"                    
+					onClick={unclearWithdrawal.bind(this)}
+				>
+                        Unclear
+				&lt;/button>
+			&lt;/Col>
+		&lt;/Row>
+	)
+	case 'clear': return (
+		&lt;Row>
+			&lt;Col xs="12">&lt;h5>Clear&lt;/h5>&lt;/Col>
+			&lt;Col xs="12">
+				&lt;Label htmlFor="Remarks" className="my-2">Remarks&lt;/Label>
+				&lt;Input type="textarea" name="Remarks" 
+					id="Remarks" 
+					onChange={e => (comment = e.target.value)}
+				/>
+			&lt;/Col>
+			&lt;Col xs="12">
+				&lt;button type="submit" 
+					className="btn btn-sm btn-primary mt-2"                    
+					onClick={clearWithdrawal.bind(this)}
+				>
+                        Clear
+				&lt;/button>
+			&lt;/Col>
+		&lt;/Row>
+	)
+	case 'for_fraud': return (
+		&lt;Row>
+			&lt;Col xs="12">&lt;h5>For Fraud Processing&lt;/h5>&lt;/Col>
+			&lt;Col xs="12">
+				&lt;Label htmlFor="Remarks" className="my-2">Remarks&lt;/Label>
+				&lt;Input type="textarea" name="Remarks" 
+					id="Remarks" 
+					onChange={e => (comment = e.target.value)}
+				/>
+			&lt;/Col>
+			&lt;Col xs="12">
+				&lt;button type="submit" 
+					className="btn btn-sm btn-primary mt-2"                    
+					onClick={forFraudProcessing.bind(this)}
+				>
+                        Process
+				&lt;/button>
+			&lt;/Col>
+		&lt;/Row>
+	)
+	}
+
+
+	//=== ACTION FUNCTIONS
+	// Must match to graphql query/mutate operations
+	function approveWithdrawal() {
+		if (withdrawalBankAccountId.length !== 0) {
+			v.props.approveWithdrawMutation({
+				variables: {
+					Id: withdrawalId,
+					WithdrawalBankAccountId: parseFloat(withdrawalBankAccountId),
+					Remarks: comment
+				}
+			})
+				.then(() => successResponse(v))
+				.catch(error => errResponse(v, error))
+		} else {
+			alert('Withdrawal Bank Account is required.')
+		}
+	}
+	function rejectWithdrawal() {
+		if (comment.length !== 0) {
+			v.props.rejectWithdrawMutation({
+				variables: {
+					Id: withdrawalId,
+					Remarks: comment
+				}
+			})
+				.then(() => successResponse(v))
+				.catch(error => errResponse(v, error))
+		} else {
+			alert('Remark is required.')
+		}
+	}
+	function unclearWithdrawal() {
+		// if (comment.length !== 0) {
+		v.props.unClearWithdrawMutation({
+			variables: {
+				Id: withdrawalId,
+				TransactionGrabId: transactionGrabId,
+				Remarks: comment,
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+		// } else {        
+		//     alert("Remark is required.")
+		// }
+	}
+	function clearWithdrawal() {
+		v.props.clearWithdrawMutation({
+			variables: {
+				Id: withdrawalId,
+				TransactionGrabId: transactionGrabId,
+				Remarks: comment,
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+	function forFraudProcessing() {
+		v.props.forFraudWithdrawMutation({
+			variables: {
+				Id: withdrawalId,
+				TransactionGrabId: transactionGrabId,
+				Remarks: comment,
+			}
+		})
+			.then(() => successResponse(v))
+			.catch(error => errResponse(v, error))
+	}
+
+}
+
+
+
+
+/**
+ * TICKET ACTION DISPLAY VISIBILITY
+ * 
+ * @param {string} a - Current status/es to match against
+ * @param {string} b - Action to be done
+ * @param {string} c - Required Access the user must have
+ * @param {object} d - Current data item
+ * @param {object} e - Inherited context from parent
+ * @returns {boolean} True / False
+ */
+function isActionVisibile(a, b, c, d, e) {
+	// console.log(c);
+	// console.log(a);
+
+	// IF GRABBED ALREADY THEN DENY; EXCEPT ADJUST AND FULFILL ACTION
+	if (c != 'actionClearWalletWithdrawalMutation' &amp;&amp; c != 'actionUnClearWalletWithdrawalMutation') {
+
+		if (d.AssigneeUserId === null &amp;&amp; c !== 'actionTransactionGrabUnGrabMutation') return false
+
+		if (d.AssigneeUserId !== null &amp;&amp; d.AssigneeUserId !== e.userInfo.userId) return false
+
+		// if ((c == 'actionAdjustWalletDepositMutation' || c == 'actionWagerFulfilledWalletDepositMutation') &amp;&amp; d.IsWageringFulfilled) {
+		// 	return false
+		// }
+
+		return (a.indexOf(d.Status) !== -1 || a.indexOf('All') !== -1) &amp;&amp; e.handleElementAccess(c)
+
+		// if (this.state.entity.AssigneeUserId == null &amp;&amp; action != 'actionTransactionGrabUnGrabMutation') {
+		//     return false;
+		// }
+		// if (this.state.entity.AssigneeUserId != null &amp;&amp; this.state.entity.AssigneeUserId != this.props.userInfo.userId) {
+		//     return false;
+		// }
+		// return ((statuses.indexOf(this.state.entity.Status) !== -1 || statuses.indexOf('All') !== -1) &amp;&amp; this.props.handleElementAccess(action)) ? true : false;
+	} else {
+		if (d.AssigneeUserId !== e.userInfo.userId) return false
+
+		return (a.indexOf(d.Status) !== -1 || a.indexOf('All') !== -1) &amp;&amp; e.handleElementAccess(c)
+
+	}
+}
+
+
+/**
+ * SUCCESS RESPONSE HANDLER
+ * 
+ * @param {any} v : Object (Props/Context) passed
+ * @returns {callback} SuccessHandler
+ */
+function successResponse(v) {
+	SuccessHandler({
+		context: v.context, 
+		callback: v.props.data.refetch().then(() => v.onModalClose()),
+	})
+}
+/**
+ * ERROR RESPONSE HANDLER
+ * 
+ * @param {any} v : 
+ * @param {any} err : Error message
+ * @returns {callback} ErrorHandler
+ */
+function errResponse(v, err) {
+	ErrorHandler({ 
+		context: v.context,
+		callback: v.onModalClose(),
+		error: { err } 
+	})
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">Copyright 2018</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

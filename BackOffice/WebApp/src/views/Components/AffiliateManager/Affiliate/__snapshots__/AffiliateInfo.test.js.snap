@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AffiliateInfo /> should render correctly 1`] = `
+<AffiliateInfo
+  data={
+    Object {
+      "affiliate": Array [
+        Object {
+          "Id": 1,
+        },
+      ],
+      "loading": false,
+    }
+  }
+>
+  <div
+    className="mb-3 c-table__title"
+  >
+    Affiliate Info
+  </div>
+  <Card
+    body={true}
+    tag="div"
+  >
+    <div
+      className="card card-body"
+    >
+      <Row
+        tag="div"
+      >
+        <div
+          className="row"
+        >
+          <Col
+            sm="6"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <div
+              className="col-12 col-sm-6"
+            >
+              <dl
+                className="c-dl--inline"
+              >
+                <dt>
+                  Affiliate Status :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Affiliate Code :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Username :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Full Name :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Primary Email :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Website URL :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  IM1 :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  IM1UserName :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  IM2 :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  IM2 UserName :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Wallet Balance :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Settlement Period :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Last Login Date :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+              </dl>
+            </div>
+          </Col>
+        </div>
+      </Row>
+    </div>
+  </Card>
+  <div
+    className="mb-3 c-table__title"
+  >
+    Settlement and commission settings
+  </div>
+  <Card
+    body={true}
+    tag="div"
+  >
+    <div
+      className="card card-body"
+    >
+      <Row
+        tag="div"
+      >
+        <div
+          className="row"
+        >
+          <Col
+            lg="4"
+            sm="6"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <div
+              className="col-12 col-sm-6 col-lg-4"
+            >
+              <dl
+                className="c-dl--inline"
+              >
+                <dt>
+                  Phone Country Code :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  PhoneNo :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Username :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Password :
+                </dt>
+                <dd>
+                  <span>
+                    ********
+                  </span>
+                </dd>
+                <dt>
+                  Secondary Email :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+              </dl>
+            </div>
+          </Col>
+          <Col
+            lg="4"
+            sm="6"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <div
+              className="col-12 col-sm-6 col-lg-4"
+            >
+              <dl
+                className="c-dl--inline"
+              >
+                <dt>
+                  Affiliate Type :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Country Code :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Bonus Code :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Currency Code :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+              </dl>
+            </div>
+          </Col>
+          <Col
+            lg="4"
+            sm="6"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <div
+              className="col-12 col-sm-6 col-lg-4"
+            >
+              <dl
+                className="c-dl--inline"
+              >
+                <dt>
+                  Earning Plan :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Settlement Period :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+                <dt>
+                  Marketing Cost :
+                </dt>
+                <dd>
+                  <span />
+                </dd>
+              </dl>
+            </div>
+          </Col>
+        </div>
+      </Row>
+    </div>
+  </Card>
+</AffiliateInfo>
+`;

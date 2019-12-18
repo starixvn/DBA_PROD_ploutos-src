@@ -1,0 +1,70 @@
+// Form
+	// .c-form {}
+	.c-form__fields {
+		display: grid;
+		.form-group {
+			display: grid;
+		}
+
+		@media(min-width: 768px) {
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 2em;
+				padding: 1em;
+			.form-group {
+				grid-gap: 1em;
+				grid-template-columns: 150px 1fr;
+				align-items: baseline;
+				label {
+					margin: auto 0;
+				}
+			}
+		}
+
+	}
+	.c-form__submit {
+		padding:1em;
+	}
+    .form-control,
+    .form-control-sm,
+    .btn-sm {
+        font-size: 0.75rem;
+    }
+    .form-control::placeholder {
+        color: #aaa;
+	}
+	.form-control {
+		min-height: 34px;
+	}
+
+// Form Input - AutoComplete Select
+    .Select {
+        //z-index: 5;
+        &.is-focused:not(.is-open) > .Select-control,
+        &.is-open > .Select-control {
+            border-color: #8ad4ee !important;
+        }
+        &.is-disabled > .Select-control { 
+            background-color: #c2cfd6 !important;
+        }
+        .c-search-filter & {
+            width: 100% !important;
+        }
+    }
+    .Select-menu-outer { 
+        border-color: #8ad4ee !important;
+		z-index: 100 !important; 
+    }
+
+    .Select-menu-outer,
+    .Select.is-focused:not(.is-open) > .Select-control,
+    .Select-control:hover { box-shadow: none !important; }
+
+    .Select-control { 
+        border-color: #c2cfd6 !important; 
+        border-radius: 0 !important;
+	}
+	
+
+.switch.switch-icon {
+	margin: auto 0;
+}

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AffiliatePaymentInfo /> should render correctly 1`] = `
+<AffiliatePaymentInfo>
+  <dl
+    className="c-dl--inline"
+  >
+    <dt>
+      Bank Account Name
+      :
+    </dt>
+    <dd>
+      <span>
+        ---
+      </span>
+    </dd>
+    <dt>
+      Bank Account Number
+      :
+    </dt>
+    <dd>
+      <span>
+        ---
+      </span>
+    </dd>
+    <dt>
+      Bank Account Branch
+      :
+    </dt>
+    <dd>
+      <span>
+        ---
+      </span>
+    </dd>
+    <dt>
+      Bank Account City
+      :
+    </dt>
+    <dd>
+      <span>
+        ---
+      </span>
+    </dd>
+    <dt>
+      Bank Account Province
+      :
+    </dt>
+    <dd>
+      <span>
+        ---
+      </span>
+    </dd>
+  </dl>
+</AffiliatePaymentInfo>
+`;
