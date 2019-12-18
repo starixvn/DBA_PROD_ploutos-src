@@ -15,7 +15,7 @@ class UserAccessModuleJoinery{
                 'type' => new NonNullType(new StringType()),
             ],
             'ModuleDescription' => [
-                'type' => new NonNullType(new StringType()),
+                'type' => new StringType(),
             ],
             'ModuleType' => [
                 'type' => new NonNullType(new StringType()),

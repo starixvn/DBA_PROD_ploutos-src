@@ -41,17 +41,17 @@ class WithdrawalNewCronCommand extends ContainerAwareCommand
         
         $output->writeln([count($newWithdrawals)]);
         
-        if(count($newWithdrawals) > 0){
-            $entryData = [
-                'cat'     => 'new_withdrawals',
-                'data'   => $newWithdrawals,
-            ];
+//         if(count($newWithdrawals) > 0){
+//             $entryData = [
+//                 'cat'     => 'new_withdrawals',
+//                 'data'   => $newWithdrawals,
+//             ];
             
-            $context = new \ZMQContext();
-            $container = $this->getContainer();
-            $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'notification_pusher'); // changed from 'my pusher'
-            $socket->connect('tcp://'.$container->getParameter('tcp_host').':'.$container->getParameter('tcp_port'));
-            $socket->send(json_encode($entryData));
-        }
+//             $context = new \ZMQContext();
+//             $container = $this->getContainer();
+//             $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'notification_pusher'); // changed from 'my pusher'
+//             $socket->connect('tcp://'.$container->getParameter('tcp_host').':'.$container->getParameter('tcp_port'));
+//             $socket->send(json_encode($entryData));
+//         }
     }
 }

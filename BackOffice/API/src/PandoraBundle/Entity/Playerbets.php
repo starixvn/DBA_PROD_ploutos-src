@@ -630,7 +630,7 @@ class Playerbets extends AbstractEntity
     /**
      * Set GamePlatform
      *
-     * @param \AppBundle\Entity\Gameplatforms $GamePlatform
+     * @param \PandoraBundle\Entity\Gameplatforms $GamePlatform
      *
      * @return Playerbets
      */
@@ -644,7 +644,7 @@ class Playerbets extends AbstractEntity
     /**
      * Get GamePlatform
      *
-     * @return \AppBundle\Entity\Gameplatforms
+     * @return \PandoraBundle\Entity\Gameplatforms
      */
     public function getGamePlatform()
     {
@@ -654,7 +654,7 @@ class Playerbets extends AbstractEntity
     /**
      * Set GamePlatformProduct
      *
-     * @param \AppBundle\Entity\Gameplatformproducts $GamePlatformProduct
+     * @param \PandoraBundle\Entity\Gameplatformproducts $GamePlatformProduct
      *
      * @return Playerbets
      */
@@ -668,7 +668,7 @@ class Playerbets extends AbstractEntity
     /**
      * Get GamePlatformProduct
      *
-     * @return \AppBundle\Entity\Gameplatformproducts
+     * @return \PandoraBundle\Entity\Gameplatformproducts
      */
     public function getGamePlatformProduct()
     {

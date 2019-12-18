@@ -18,7 +18,10 @@ use PandoraBundle\GraphQL\Type\GamePlatformOAuthCredential\GamePlatformOAuthCred
 
 class GamePlatformOAuthCredentialMutationType extends AbstractContainerAwareField
 {
-
+    public function getDescription(){
+        return 'Game Platform OAuth Credential';
+    }
+    
     public function build(FieldConfig $config)
     {
         $this->addArguments([

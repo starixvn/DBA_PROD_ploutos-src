@@ -23,6 +23,10 @@ use PandoraBundle\GraphQL\Type\WalletWithdrawal\WalletWithdrawalType;
 
 class WalletWithdrawalChartField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Dashboard Wallet Withdrawal Chart';
+    }
+    
     public function build(FieldConfig $config)
     {
         $entityFields = WalletWithdrawalJoinery::fields();

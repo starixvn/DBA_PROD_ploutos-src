@@ -327,13 +327,13 @@ class PlayerProfile extends Component {
 			}
 		)}
 
-		const tabIndex = JSON.parse(localStorage.getItem('tabs:main'))		
+		// const tabIndex = JSON.parse(localStorage.getItem('tabs:main'))		
 		return (
 			<DetailView 
 				displayTitle={`${displayTitle}: ${item[displayTitleField]}`}
 				displayMainTab={mainTabs}
 				displaySecondaryTab={secondaryTabs}
-				displayActions={(tabIndex === 0) ? action.actions(item, this.context, this.props) : []}
+				displayActions={action.actions(item, this.context, this.props)}
 				displayAccountStatus={this.props.data.playerProfile[0].AccountStatus}
 			/>
 		)

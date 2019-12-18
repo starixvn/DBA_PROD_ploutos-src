@@ -33,9 +33,13 @@ const GeneralInfoTab = props => {
 	const fields = fieldsToDisplay().map((f, i) => {
 		const params = f.type === 'link' && f.params.map(p => item[p]).join('/')
 		const fullPath = f.link + params
-		const val = typeof item[f.field]
-		let value = '' // eslint-disable-line no-unused-vars 
+		let val = typeof item[f.field]
+		let value = '' // eslint-disable-line no-unused-vars
 
+		if(val == 'number' && (f.varType == 'Int' || f.varType == 'Int!')){
+			val = 'string';
+		}
+		
 		switch (val) {		
 		case 'boolean':
 			if (f.title === 'Status' || f.title === 'Record Status') {

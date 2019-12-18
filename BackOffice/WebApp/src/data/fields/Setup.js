@@ -980,7 +980,7 @@ export const Currency = [
 		'title': 'Currency Code',
 		'type': 'link',
 		'link': '/setup/currency/view/',
-		'params': ['CurrencyCode'],
+		'params': ['Id'],
 		'varType': 'String!',
 		'hidden': {
 			'searchFieldSelection': false,
@@ -1271,7 +1271,7 @@ export const Platform = [
 	{
 		'field': 'ServiceProviderCode',
 		'title': 'Game Provider',
-		'varType': 'String',
+		'varType': 'String!',
 		'hidden': {
 			'searchFieldSelection': false,
 			'tableColumnSelection': false,

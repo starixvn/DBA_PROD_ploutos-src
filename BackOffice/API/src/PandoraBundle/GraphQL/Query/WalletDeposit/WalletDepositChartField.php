@@ -23,6 +23,10 @@ use PandoraBundle\Resolver\WalletDepositResolver;
 
 class WalletDepositChartField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Dashboard Wallet Deposit Chart';
+    }
+    
     public function build(FieldConfig $config)
     {
         $entityFields = WalletDepositJoinery::fields();

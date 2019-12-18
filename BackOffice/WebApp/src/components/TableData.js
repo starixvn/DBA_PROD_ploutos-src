@@ -93,9 +93,9 @@ class TableData extends Component {
 							<td>
 								<Button
 									color="link"
-									title={d.isViewed.length === 0 ? 'Mark as Viewed' : 'Unmark as Viewed'}
+									title={d.isViewed === null ? 'Mark as Viewed' : 'Unmark as Viewed'}
 									onClick={this.handleViewToggle({ 'recordID': d.Id, 'viewID': d.isViewed })}>
-									{d.isViewed.length === 0 ? (
+									{d.isViewed === null ? (
 										<i className="fa fa-eye text-secondary"></i>
 									) : (
 										<i className="fa fa-eye text-dark"></i>

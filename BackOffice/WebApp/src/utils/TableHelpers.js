@@ -80,7 +80,7 @@ export function changeColumns() {
 export function toggleViewRecord(v) {
 	v.props.recordViewedMutation({
 		variables: {
-			Id: v.viewData.viewID.length === 0 ? '0' : v.viewData.viewID,
+			Id: v.viewData.viewID === null ? '0' : v.viewData.viewID,
 			SourceObject: v.props.schemaKey.comment,
 			SourceObjectId: v.viewData.recordID,
 			ViewedBy: v.context.userInfo.userName

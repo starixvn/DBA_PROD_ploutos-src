@@ -400,9 +400,9 @@ class Playerprofiles extends AbstractEntity
     /**
      * @var integer
      *
-     * @ORM\Column(name="LoginAttemp", type="integer", nullable=false)
+     * @ORM\Column(name="LoginAttempt", type="integer", nullable=false)
      */
-    private $LoginAttemp = '0';
+    private $LoginAttempt = '0';
 
     /**
      * @var integer
@@ -1568,27 +1568,27 @@ class Playerprofiles extends AbstractEntity
     }
 
     /**
-     * Set LoginAttemp
+     * Set LoginAttempt
      *
-     * @param integer $LoginAttemp
+     * @param integer $LoginAttempt
      *
      * @return Playerprofiles
      */
-    public function setLoginAttemp($LoginAttemp)
+    public function setLoginAttempt($LoginAttempt)
     {
-        $this->LoginAttemp = $LoginAttemp;
+        $this->LoginAttempt = $LoginAttempt;
 
         return $this;
     }
 
     /**
-     * Get LoginAttemp
+     * Get LoginAttempt
      *
      * @return integer
      */
-    public function getLoginAttemp()
+    public function getLoginAttempt()
     {
-        return $this->LoginAttemp;
+        return $this->LoginAttempt;
     }
 
     /**
@@ -2112,7 +2112,7 @@ class Playerprofiles extends AbstractEntity
     /**
      * Get VipLevel
      *
-     * @return \AppBundle\Entity\Viplevels
+     * @return \PandoraBundle\Entity\Viplevels
      */
     public function getVipLevel()
     {
@@ -2136,7 +2136,7 @@ class Playerprofiles extends AbstractEntity
     /**
      * Get PaymentRiskLevel
      *
-     * @return \AppBundle\Entity\Paymentrisklevels
+     * @return \PandoraBundle\Entity\Paymentrisklevels
      */
     public function getPaymentRiskLevel()
     {
@@ -2170,7 +2170,7 @@ class Playerprofiles extends AbstractEntity
     /**
      * Set FraudRiskLevel
      *
-     * @param \AppBundle\Entity\Fraudrisklevels $FraudRiskLevel
+     * @param \PandoraBundle\Entity\Fraudrisklevels $FraudRiskLevel
      *
      * @return Playerprofiles
      */

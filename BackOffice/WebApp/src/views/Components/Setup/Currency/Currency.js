@@ -332,7 +332,7 @@ const queryDetailOptions = {
 	skip: props => props.isTabDisplayed || props.match !== undefined && props.match.params.action === 'list' || props.match.params.action === 'add',
 	options: props => ({
 		variables: {
-			CurrencyCode: props.match.params.id
+			Id: props.match.params.id
 		},
 		notifyOnNetworkStatusChange: true,
 		fetchPolicy: 'network-only'

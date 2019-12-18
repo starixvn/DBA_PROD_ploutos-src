@@ -287,7 +287,7 @@ class Rebates extends AbstractEntity
     /**
      * Get VIPLevel
      *
-     * @return \AppBundle\Entity\Viplevels
+     * @return \PandoraBundle\Entity\Viplevels
      */
     public function getVIPLevel()
     {

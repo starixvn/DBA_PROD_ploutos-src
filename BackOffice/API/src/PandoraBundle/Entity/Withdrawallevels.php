@@ -2,8 +2,9 @@
 
 namespace PandoraBundle\Entity;
 
-use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use PandoraBundle\Annotations\RecordNameFieldAnnotation;
 
 /**
@@ -11,6 +12,7 @@ use PandoraBundle\Annotations\RecordNameFieldAnnotation;
  *
  * @RecordNameFieldAnnotation(candidateRecordNameField="WithdrawalLevelName")
  * @ORM\Table(name="WithdrawalLevels", uniqueConstraints={@ORM\UniqueConstraint(name="WithdrawalLevelCode", columns={"WithdrawalLevelCode"})})
+ * @UniqueEntity(fields={"WithdrawalLevelCode"}, message="Code already exist")
  * @ORM\Entity
  */
 class Withdrawallevels extends AbstractEntity

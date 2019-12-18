@@ -383,7 +383,7 @@ export const Users = [
 		'searchOptions': 'teamsList',
 		'searchOptionKey': 'TeamName',
 		'searchExpression': 'EQUALS',
-		'varType': 'ID!',
+		'varType': 'ID',
 		'hidden': {
 			'searchFieldSelection': true,
 			'tableColumnSelection': false,

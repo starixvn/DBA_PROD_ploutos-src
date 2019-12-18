@@ -211,9 +211,9 @@ class PlayerProfileJoinery{
                 'type' => new BooleanType(),
                 'joineryTerm' => 'a.HasBeenUpdated'
             ],
-            'LoginAttemp' => [
+            'LoginAttempt' => [
                 'type' => new IntType(),
-                'joineryTerm' => 'a.LoginAttemp'
+                'joineryTerm' => 'a.LoginAttempt'
             ],
             'BankAccountId' => [
                 'type' => new IdType(),
@@ -298,7 +298,7 @@ class PlayerProfileJoinery{
             ],
             'DaysRegistered' => [
                 'type' => new StringType(),
-                'joineryTerm' => 'DATE_DIFF(CURRENT_TIME(), b.DateCreated) AS DaysRegistered'
+                'joineryTerm' => 'DATE_DIFF(CURRENT_TIMESTAMP(), b.DateCreated) AS DaysRegistered'
             ],
             'LockedBalance' => [
                 'type' => new DecimalType(),
@@ -370,6 +370,10 @@ class PlayerProfileJoinery{
             'CurrencyCode' => [
                 'type' => new StringType(),
                 'joineryTerm' => 'b.CurrencyCode'
+            ],
+            'CurrencyId' => [
+                'type' => new StringType(),
+                'joineryTerm' => 'b.CurrencyId'
             ],
             'BrandId' => [
                 'type' => new IdType(),

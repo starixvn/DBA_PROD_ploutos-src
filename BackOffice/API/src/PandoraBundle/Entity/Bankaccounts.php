@@ -169,7 +169,7 @@ class Bankaccounts extends AbstractEntity
     private $InternetBankingUrl;
     
     /**
-     * @var decimal
+     * @var string
      *
      * @Assert\NotBlank()
      * 
@@ -582,7 +582,7 @@ class Bankaccounts extends AbstractEntity
     /**
      * Set BalanceCeiling
      *
-     * @param decimal $BalanceCeiling
+     * @param string $BalanceCeiling
      *
      * @return Bankaccounts
      */

@@ -508,7 +508,7 @@ class Agents
     /**
      * Set Wallet
      *
-     * @param \AppBundle\Entity\Wallets $Wallet
+     * @param \PandoraBundle\Entity\Wallets $Wallet
      *
      * @return Agents
      */
@@ -522,7 +522,7 @@ class Agents
     /**
      * Get Wallet
      *
-     * @return \AppBundle\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getWallet()
     {

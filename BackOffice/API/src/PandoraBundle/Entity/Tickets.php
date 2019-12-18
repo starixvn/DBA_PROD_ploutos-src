@@ -513,7 +513,7 @@ class Tickets extends AbstractEntity
     /**
      * Set TicketCategory
      *
-     * @param \AppBundle\Entity\Ticketcategory $TicketCategory
+     * @param \PandoraBundle\Entity\Ticketcategory $TicketCategory
      *
      * @return Tickets
      */
@@ -527,7 +527,7 @@ class Tickets extends AbstractEntity
     /**
      * Get TicketCategory
      *
-     * @return \AppBundle\Entity\Ticketcategory
+     * @return \PandoraBundle\Entity\Ticketcategory
      */
     public function getTicketCategory()
     {
@@ -537,7 +537,7 @@ class Tickets extends AbstractEntity
     /**
      * Set Teams
      *
-     * @param \AppBundle\Entity\Teams $Team
+     * @param \PandoraBundle\Entity\Teams $Team
      *
      * @return Tickets
      */
@@ -551,7 +551,7 @@ class Tickets extends AbstractEntity
     /**
      * Get Team
      *
-     * @return \AppBundle\Entity\Ticket
+     * @return \PandoraBundle\Entity\Teams
      */
     public function getTeam()
     {
@@ -561,7 +561,7 @@ class Tickets extends AbstractEntity
     /**
      * Set Teams
      *
-     * @param \AppBundle\Entity\Brands $Brand
+     * @param \PandoraBundle\Entity\Brands $Brand
      *
      * @return Tickets
      */
@@ -575,7 +575,7 @@ class Tickets extends AbstractEntity
     /**
      * Get Team
      *
-     * @return \AppBundle\Entity\Brands
+     * @return \PandoraBundle\Entity\Brands
      */
     public function getBrand()
     {

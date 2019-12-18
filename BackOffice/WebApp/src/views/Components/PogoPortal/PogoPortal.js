@@ -4,7 +4,6 @@ import gql from 'graphql-tag'
 
 class PogoPortal extends Component {
   render(){
-  	console.log(this.props);
   	if(this.props.data.loading){
     	return <div>Please wait while we redirect you to Pogo Portal...</div>
   	}

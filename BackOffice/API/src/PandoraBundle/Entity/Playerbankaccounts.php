@@ -585,7 +585,7 @@ class Playerbankaccounts extends AbstractEntity
     /**
      * Set Bank
      *
-     * @param \PandoraBundle\Entity\Bank $Bank
+     * @param \PandoraBundle\Entity\Banks $Bank
      *
      * @return Playerbankaccounts
      */
@@ -599,7 +599,7 @@ class Playerbankaccounts extends AbstractEntity
     /**
      * Get Bank
      *
-     * @return \PandoraBundle\Entity\Bank
+     * @return \PandoraBundle\Entity\Banks
      */
     public function getBank()
     {

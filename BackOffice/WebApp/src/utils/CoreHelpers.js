@@ -503,6 +503,7 @@ export function GetAllFieldsToView(tableHeaders) {
 				'field': th.field,
 				'title': th.title,
 				'type': th.type,
+				'varType': th.varType,
 				'link': th.link,
 				'params': th.params,
 				'decimalPlace': th.decimalPlace
