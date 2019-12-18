@@ -644,7 +644,7 @@ class Walletfundtransfers
     /**
      * Set SourceWallet
      *
-     * @param \AppBundle\Entity\Wallets $SourceWallet
+     * @param \PandoraBundle\Entity\Wallets $SourceWallet
      *
      * @return Walletfundtransfers
      */
@@ -658,7 +658,7 @@ class Walletfundtransfers
     /**
      * Get SourceWallet
      *
-     * @return \AppBundle\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getSourceWallet()
     {
@@ -668,7 +668,7 @@ class Walletfundtransfers
     /**
      * Set DestinationWallet
      *
-     * @param \AppBundle\Entity\Wallets $DestinationWallet
+     * @param \PandoraBundle\Entity\Wallets $DestinationWallet
      *
      * @return Walletfundtransfers
      */
@@ -682,7 +682,7 @@ class Walletfundtransfers
     /**
      * Get DestinationWallet
      *
-     * @return \AppBundle\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getDestinationWallet()
     {
@@ -692,13 +692,13 @@ class Walletfundtransfers
     /**
      * Set Agent
      *
-     * @param \AppBundle\Entity\Agents $Agents
+     * @param \PandoraBundle\Entity\Agents $Agents
      *
      * @return Walletfundtransfers
      */
     public function setAgent(\PandoraBundle\Entity\Agents $Agents = null)
     {
-        $this->Agent = $Agent;
+        $this->Agent = $Agents;
         
         return $this;
     }
@@ -706,7 +706,7 @@ class Walletfundtransfers
     /**
      * Get Agent
      *
-     * @return \AppBundle\Entity\Agents
+     * @return \PandoraBundle\Entity\Agents
      */
     public function getAgent()
     {
@@ -716,7 +716,7 @@ class Walletfundtransfers
     /**
      * Set SubAgent
      *
-     * @param \AppBundle\Entity\Subagents $SubAgents
+     * @param \PandoraBundle\Entity\Subagents $SubAgents
      *
      * @return Walletfundtransfers
      */
@@ -730,7 +730,7 @@ class Walletfundtransfers
     /**
      * Get SubAgent
      *
-     * @return \AppBundle\Entity\Subagents
+     * @return \PandoraBundle\Entity\Subagents
      */
     public function getSubAgent()
     {
@@ -740,7 +740,7 @@ class Walletfundtransfers
     /**
      * Set PlayerProfile
      *
-     * @param \AppBundle\Entity\Playerprofiles $PlayerProfile
+     * @param \PandoraBundle\Entity\Playerprofiles $PlayerProfile
      *
      * @return Walletfundtransfers
      */
@@ -754,7 +754,7 @@ class Walletfundtransfers
     /**
      * Get PlayerProfile
      *
-     * @return \AppBundle\Entity\Playerprofiles
+     * @return \PandoraBundle\Entity\Playerprofiles
      */
     public function getPlayerProfile()
     {

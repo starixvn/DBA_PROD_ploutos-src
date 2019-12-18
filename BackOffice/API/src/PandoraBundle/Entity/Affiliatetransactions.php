@@ -717,7 +717,7 @@ class Affiliatetransactions extends AbstractEntity
     /**
      * Set Affiliates
      *
-     * @param \AppBundle\Entity\Affiliates $Affiliate
+     * @param \PandoraBundle\Entity\Affiliates $Affiliate
      *
      * @return AffiliateTransactions
      */
@@ -731,7 +731,7 @@ class Affiliatetransactions extends AbstractEntity
     /**
      * Get Affiliate
      *
-     * @return \AppBundle\Entity\Affiliates
+     * @return \PandoraBundle\Entity\Affiliates
      */
     public function getAffiliate()
     {
@@ -765,7 +765,7 @@ class Affiliatetransactions extends AbstractEntity
     /**
      * Set TransactionGrabs
      *
-     * @param \AppBundle\Entity\Transactiongrabs $TransactionGrabs
+     * @param \PandoraBundle\Entity\Transactiongrabs $TransactionGrabs
      *
      * @return AffiliateTransactions
      */
@@ -779,7 +779,7 @@ class Affiliatetransactions extends AbstractEntity
     /**
      * Get TransactionGrabs
      *
-     * @return \AppBundle\Entity\Transactiongrabs
+     * @return \PandoraBundle\Entity\Transactiongrabs
      */
     public function getTransactionGrabs()
     {

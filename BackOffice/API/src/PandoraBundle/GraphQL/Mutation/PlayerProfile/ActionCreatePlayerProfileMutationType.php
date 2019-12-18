@@ -44,8 +44,7 @@ class ActionCreatePlayerProfileMutationType extends AbstractContainerAwareField
             'SecurityQuestionId' => new IdType(),
             'SecurityAnswer' => new StringType(),
             'CurrencyId' => new NonNullType(new IdType()),
-            'LanguageId' => new NonNullType(new IdType()),
-            // 'SrcUrl' => new StringType()
+            'LanguageId' => new NonNullType(new IdType())
         ]);
     }
     
@@ -56,6 +55,15 @@ class ActionCreatePlayerProfileMutationType extends AbstractContainerAwareField
     
     public function resolve($value, array $args, ResolveInfo $info)
     {
+        if(!empty($args['MobileCountryCodeNumber']) && !preg_match('/^\+?\d+$/', $args['MobileCountryCodeNumber'])){
+            $info->getExecutionContext()->addError(new \Exception(json_encode([['field' => 'MobileNumber', 'message' => 'Mobile Country Code is invalid, should only contain numbers and + sign.']])));
+            return ['apiResult' => ''];
+        }
+        if(!empty($args['MobileNumber']) && !is_numeric($args['MobileNumber'])){
+            $info->getExecutionContext()->addError(new \Exception(json_encode([['field' => 'MobileNumber', 'message' => 'Mobile Number is invalid, should only contain numbers.']])));
+            return ['apiResult' => ''];
+        }
+        
         $args['IsCreatedByCS'] = true;
         $pandoraApi = $this->container->get(PandoraBackendService::class);
         $pandoraApi->setParameters('v1/Player/RegisterFromBackOffice', 'POST', $args);

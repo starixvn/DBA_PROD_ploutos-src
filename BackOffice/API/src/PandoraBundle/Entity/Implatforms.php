@@ -5,6 +5,7 @@ namespace PandoraBundle\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use PandoraBundle\Annotations\RecordNameFieldAnnotation;
+use PandoraBundle\GraphQL\Query\IMPlatform\IMPlatformField;
 
 /**
  * Implatforms
@@ -114,8 +115,6 @@ class Implatforms extends AbstractEntity
      * Set IMPlatformCode
      *
      * @param string $IMPlatformCode
-     *
-     * @return IMPlatformCode
      */
     public function setIMPlatformCode($IMPlatformCode)
     {

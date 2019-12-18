@@ -23,6 +23,10 @@ use PandoraBundle\Resolver\WalletWinResolver;
 
 class WalletWinChartField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Dashboard Wallet Win Chart';
+    }
+    
     public function build(FieldConfig $config)
     {
         $entityFields = WalletWinJoinery::fields();

@@ -47,43 +47,43 @@ class ActionCreateWalletDepositMutationType extends AbstractContainerAwareField
     
     public function resolve($value, array $args, ResolveInfo $info)
     {
-//         $pandoraApi = $this->container->get(PandoraBackendService::class);
-//         // $depositTypeParser = new WalletDepositTypeTypeEnum();
-//         $pandoraApi->setParameters('Wallet/DepositFromCS', 'POST', [
-//             'PaymentMethodId' => $args['PaymentMethodId'],
-//             'BankAccountId' => (int) $args['BankAccountId'],
-//             'DepositAmount' => $args['DepositAmount'],
-//             'BonusCode' => $args['BonusCode'],
-//             'PlayerLoginName' => $args['PlayerLoginName'],
-//             // 'DepositType' => $depositTypeParser->parseValue($args['DepositType']),
-//             'DepositType' => $args['DepositType'],
-//             'Platform' => 'WEB',
-//             'DepositPageUsed' => 'MD', // MD means Manual Deposit
-//             'RollbaseId' => 0,
-//         ]);
-//         $apiResult = $pandoraApi->executeQuery($info);
+        $pandoraApi = $this->container->get(PandoraBackendService::class);
+        // $depositTypeParser = new WalletDepositTypeTypeEnum();
+        $pandoraApi->setParameters('Wallet/DepositFromCS', 'POST', [
+            'PaymentMethodId' => $args['PaymentMethodId'],
+            'BankAccountId' => (int) $args['BankAccountId'],
+            'DepositAmount' => $args['DepositAmount'],
+            'BonusCode' => $args['BonusCode'],
+            'PlayerLoginName' => $args['PlayerLoginName'],
+            // 'DepositType' => $depositTypeParser->parseValue($args['DepositType']),
+            'DepositType' => $args['DepositType'],
+            'Platform' => 'WEB',
+            'DepositPageUsed' => 'MD', // MD means Manual Deposit
+            'RollbaseId' => 0,
+        ]);
+        $apiResult = $pandoraApi->executeQuery($info);
         
-//         // CREATE COMMENT
-//         if($apiResult->Status){
-//             if(isset($args['Notes']) && str_replace(' ', '', $args['Notes']) != ''){
-//                 $currentUser = $this->container->get('security.token_storage')->getToken()->getUser();
-//                 $systemModule = new SystemModulesIntTypeEnum();
-//                 $commentArgs = [
-//                     'Id' => 0,
-//                     'SourceObject' => $systemModule->parseValue('Walletdeposits'),
-//                     'SourceObjectId' => $apiResult->Data->Id,
-//                     'CommentedBy' => $currentUser->getUsername(),
-//                     'Note' => $args['Notes'],
-//                 ];
+        // CREATE COMMENT
+        if($apiResult->Status){
+            if(isset($args['Notes']) && str_replace(' ', '', $args['Notes']) != ''){
+                $currentUser = $this->container->get('security.token_storage')->getToken()->getUser();
+                $systemModule = new SystemModulesIntTypeEnum();
+                $commentArgs = [
+                    'Id' => 0,
+                    'SourceObject' => $systemModule->parseValue('Walletdeposits'),
+                    'SourceObjectId' => $apiResult->Data->Id,
+                    'CommentedBy' => $currentUser->getUsername(),
+                    'Note' => $args['Notes'],
+                ];
                 
-//                 $commentEntityResolver = $this->container->get(CommentResolver::class);
-//                 $commentEntityResolver->initAbstractResolver(['entity' => $commentArgs], []);
-//                 $commentEntityResolver->prepareEntity(Comments::class);
-//                 $commentEntityResolver->validateEntity();
-//                 $commentEntityResolver->mergeEntity();
-//             }
-//         }
+                $commentEntityResolver = $this->container->get(CommentResolver::class);
+                $commentEntityResolver->initAbstractResolver(['entity' => $commentArgs], []);
+                $commentEntityResolver->prepareEntity(Comments::class);
+                $commentEntityResolver->validateEntity();
+                $commentEntityResolver->mergeEntity();
+            }
+        }
         
-//         return ['apiResult' => json_encode($apiResult)];
+        return ['apiResult' => json_encode($apiResult)];
     }
 }

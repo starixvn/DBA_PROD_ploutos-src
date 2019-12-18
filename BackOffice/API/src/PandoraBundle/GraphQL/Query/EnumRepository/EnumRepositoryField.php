@@ -15,6 +15,10 @@ use PandoraBundle\GraphQL\Type\EnumType\EnumType;
 
 class EnumRepositoryField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Picklist Selections. *Please allow every role.';
+    }
+    
     public function build(FieldConfig $config)
     {}
     

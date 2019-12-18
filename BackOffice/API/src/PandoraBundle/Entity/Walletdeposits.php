@@ -1386,7 +1386,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Set Wallet
      *
-     * @param \AppBundle\Entity\Wallets $Wallet
+     * @param \PandoraBundle\Entity\Wallets $Wallet
      *
      * @return Walletdeposits
      */
@@ -1400,7 +1400,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Get Wallet
      *
-     * @return \AppBundle\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getWallet()
     {
@@ -1410,7 +1410,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Set BankAccount
      *
-     * @param \AppBundle\Entity\Bankaccounts $BankAccount
+     * @param \PandoraBundle\Entity\Bankaccounts $BankAccount
      *
      * @return Walletdeposits
      */
@@ -1424,7 +1424,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Get BankAccount
      *
-     * @return \AppBundle\Entity\BankAccount
+     * @return \PandoraBundle\Entity\Bankaccounts
      */
     public function getBankAccount()
     {
@@ -1434,7 +1434,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Set PaymentRiskLevel
      *
-     * @param \AppBundle\Entity\Paymentrisklevels $PaymentRiskLevel
+     * @param \PandoraBundle\Entity\Paymentrisklevels $PaymentRiskLevel
      *
      * @return Walletdeposits
      */
@@ -1448,7 +1448,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Get PaymentRiskLevel
      *
-     * @return \AppBundle\Entity\Paymentrisklevels
+     * @return \PandoraBundle\Entity\Paymentrisklevels
      */
     public function getPaymentRiskLevel()
     {
@@ -1458,7 +1458,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Set PaymentMethod
      *
-     * @param \AppBundle\Entity\Paymentmethods $PaymentMethod
+     * @param \PandoraBundle\Entity\Paymentmethods $PaymentMethod
      *
      * @return Walletdeposits
      */
@@ -1472,7 +1472,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Get PaymentMethod
      *
-     * @return \AppBundle\Entity\Paymentmethods
+     * @return \PandoraBundle\Entity\Paymentmethods
      */
     public function getPaymentMethod()
     {
@@ -1482,7 +1482,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Set TransactionGrabs
      *
-     * @param \AppBundle\Entity\Transactiongrabs $TransactionGrabs
+     * @param \PandoraBundle\Entity\Transactiongrabs $TransactionGrabs
      *
      * @return Walletdeposits
      */
@@ -1496,7 +1496,7 @@ class Walletdeposits extends AbstractEntity
     /**
      * Get TransactionGrabs
      *
-     * @return \AppBundle\Entity\Transactiongrabs
+     * @return \PandoraBundle\Entity\Transactiongrabs
      */
     public function getTransactionGrabs()
     {

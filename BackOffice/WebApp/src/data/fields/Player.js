@@ -289,7 +289,7 @@ export const Profile = [
 		'varType': 'String',
 		'type': 'link',
 		'link': '/setup/currency/view/',
-		'params': ['CurrencyCode'],
+		'params': ['CurrencyId'],
 		'hidden': {
 			'searchFieldSelection': false,
 			'tableColumnSelection': false,
@@ -297,6 +297,30 @@ export const Profile = [
 			'detail': false,
 			'form': {
 				'search': false,
+				'add': true,
+				'edit': true
+			}
+		},
+		'form': {
+			'defaultValue': '',
+			'readOnly': {
+				'add': false,
+				'edit': false
+			}
+		}
+	},
+	{
+		'field': 'CurrencyId',
+		'title': 'Currency Id',
+		'varType': 'ID',
+		'isRequired': true,
+		'hidden': {
+			'searchFieldSelection': true,
+			'tableColumnSelection': true,
+			'list': true,
+			'detail': true,
+			'form': {
+				'search': true,
 				'add': true,
 				'edit': true
 			}
@@ -1153,7 +1177,7 @@ export const Profile = [
 		}
 	},
 	{
-		'field': 'LoginAttemp',
+		'field': 'LoginAttempt',
 		'title': 'Login Attempt',
 		'varType': 'ID',
 		'hidden': {

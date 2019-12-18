@@ -23,6 +23,10 @@ use Youshido\GraphQL\Type\NonNullType;
 
 class WalletLossChartField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Dashboard Wallet Loss Chart';
+    }
+    
     public function build(FieldConfig $config)
     {
         $entityFields = WalletLossJoinery::fields();

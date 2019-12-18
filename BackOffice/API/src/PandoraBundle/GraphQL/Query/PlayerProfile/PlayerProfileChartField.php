@@ -23,6 +23,10 @@ use PandoraBundle\Resolver\PlayerProfileResolver;
 
 class PlayerProfileChartField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Dashboard Player Profile Chart';
+    }
+    
     public function build(FieldConfig $config)
     {
         $entityFields = PlayerProfileJoinery::fields();

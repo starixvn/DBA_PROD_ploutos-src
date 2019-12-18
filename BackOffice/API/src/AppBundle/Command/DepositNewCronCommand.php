@@ -42,16 +42,16 @@ class DepositNewCronCommand extends ContainerAwareCommand
         $output->writeln([count($newDeposit)]);
         
         if(count($newDeposit) > 0){
-            $entryData = [
-                'cat'     => 'new_deposits',
-                'data'   => $newDeposit,
-            ];
+//             $entryData = [
+//                 'cat'     => 'new_deposits',
+//                 'data'   => $newDeposit,
+//             ];
             
-            $context = new \ZMQContext();
-            $container = $this->getContainer();
-            $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'notification_pusher'); // changed from 'my pusher'
-            $socket->connect('tcp://'.$container->getParameter('tcp_host').':'.$container->getParameter('tcp_port'));
-            $socket->send(json_encode($entryData));
+//             $context = new \ZMQContext();
+//             $container = $this->getContainer();
+//             $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'notification_pusher'); // changed from 'my pusher'
+//             $socket->connect('tcp://'.$container->getParameter('tcp_host').':'.$container->getParameter('tcp_port'));
+//             $socket->send(json_encode($entryData));
         }
     }
 }

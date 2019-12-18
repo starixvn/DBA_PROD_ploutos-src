@@ -149,11 +149,11 @@ use PandoraBundle\GraphQL\Query\BrandMarket\BrandMarketField;
 use PandoraBundle\GraphQL\Query\BrandMarket\BrandMarketListField;
 use PandoraBundle\GraphQL\Query\BrandMarketEmailNotificationSetup\BrandMarketEmailNotificationSetupField;
 use PandoraBundle\GraphQL\Query\BrandMarketEmailNotificationSetup\BrandMarketEmailNotificationSetupListField;
-use PandoraBundle\GraphQL\Query\Dashboard\DashboardDepositField;
+// use PandoraBundle\GraphQL\Query\Dashboard\DashboardDepositField;
 use PandoraBundle\GraphQL\Query\User\UserPersonalInfoField;
 use PandoraBundle\GraphQL\Query\Comment\CommentField;
 use PandoraBundle\GraphQL\Query\Comment\CommentListField;
-use PandoraBundle\GraphQL\Query\Dashboard\DashboardPlayerProfileField;
+// use PandoraBundle\GraphQL\Query\Dashboard\DashboardPlayerProfileField;
 use PandoraBundle\GraphQL\Query\SystemInfo\SystemInfoField;
 use PandoraBundle\GraphQL\Query\Tickets\TicketsField;
 use PandoraBundle\GraphQL\Query\Tickets\TicketsListField;
@@ -412,8 +412,8 @@ class QueryType extends AbstractObjectType
             new WageringFulfilmentField(),
             new WageringFulfilmentListField(),
             
-            new DashboardDepositField(),
-            new DashboardPlayerProfileField(),
+//             new DashboardDepositField(),
+//             new DashboardPlayerProfileField(),
 
             new PlayerFingerPrintField(),
             new PlayerFingerPrintListField(),

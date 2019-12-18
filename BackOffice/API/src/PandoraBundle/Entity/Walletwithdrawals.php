@@ -571,7 +571,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Set Wallet
      *
-     * @param \PandoraBunde\Entity\Wallets $Wallet
+     * @param \PandoraBundle\Entity\Wallets $Wallet
      *
      * @return Walletwithdrawals
      */
@@ -585,7 +585,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Get Wallet
      *
-     * @return \PandoraBunde\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getWallet()
     {
@@ -595,7 +595,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Set Playerbankaccounts
      *
-     * @param \PandoraBunde\Entity\Playerbankaccounts $PlayerBankAccount
+     * @param \PandoraBundle\Entity\Playerbankaccounts $PlayerBankAccount
      *
      * @return Walletwithdrawals
      */
@@ -609,7 +609,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Get Playerbankaccounts
      *
-     * @return \PandoraBunde\Entity\Playerbankaccounts
+     * @return \PandoraBundle\Entity\Playerbankaccounts
      */
     public function getPlayerBankAccount()
     {
@@ -619,7 +619,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Set Bankaccounts
      *
-     * @param \PandoraBunde\Entity\Bankaccounts $PlayerBankAccount
+     * @param \PandoraBundle\Entity\Bankaccounts $PlayerBankAccount
      *
      * @return Walletwithdrawals
      */
@@ -633,7 +633,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Get Bankaccounts
      *
-     * @return \PandoraBunde\Entity\Bankaccounts
+     * @return \PandoraBundle\Entity\Bankaccounts
      */
     public function getWithdrawalBankAccount()
     {
@@ -643,7 +643,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Set TransactionGrabs
      *
-     * @param \AppBundle\Entity\Transactiongrabs $TransactionGrabs
+     * @param \PandoraBundle\Entity\Transactiongrabs $TransactionGrabs
      *
      * @return Walletwithdrawals
      */
@@ -657,7 +657,7 @@ class Walletwithdrawals extends AbstractEntity
     /**
      * Get TransactionGrabs
      *
-     * @return \AppBundle\Entity\Transactiongrabs
+     * @return \PandoraBundle\Entity\Transactiongrabs
      */
     public function getTransactionGrabs()
     {

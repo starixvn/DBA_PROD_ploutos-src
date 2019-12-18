@@ -292,42 +292,42 @@ class Full extends Component {
 	}
 
 	componentDidMount() {
-		var currUserInfo = GetLocalData('currUserInformations')
-		if (currUserInfo) {
-			currUserInfo = JSON.parse(currUserInfo)
-			if (currUserInfo.wsPort) {
-				try {
-					var ab = require('../../components/Autobahn')
-				} catch (e) {
-					// throw error
-				}
+		// var currUserInfo = GetLocalData('currUserInformations')
+		// if (currUserInfo) {
+		// 	currUserInfo = JSON.parse(currUserInfo)
+		// 	if (currUserInfo.wsPort) {
+		// 		try {
+		// 			var ab = require('../../components/Autobahn')
+		// 		} catch (e) {
+		// 			// throw error
+		// 		}
 				
-				var conn = new ab.Session(LocalConfiguration.ApiEndPoint().replace('http', 'ws')+':'+currUserInfo.wsPort,
-					function () {
-						if (this.handleElementAccess('walletDeposit')) {
-							conn.subscribe('new_deposits', function (topic, data) {
-								window.handleReceivedNotification(true, data)
-							})
-						}
-						if (this.handleElementAccess('walletWithdrawal')) {
-							conn.subscribe('new_withdrawals', function (topic, data) {
-								window.handleReceivedNotification(true, data)
-							})
-						}
-						if (this.handleElementAccess('playerProfile')) {
-							conn.subscribe('new_registrations', function (topic, data) {
-								window.handleReceivedNotification(true, data)
-							})
-						}
-					}.bind(this),
-					function () {
-						/* eslint-disable no-console */
-						console.warn('WebSocket connection has been closed!')
-					},
-					{ 'skipSubprotocolCheck': true }
-				)
-			}
-		}
+		// 		var conn = new ab.Session(LocalConfiguration.ApiEndPoint().replace('http', 'ws')+':'+currUserInfo.wsPort,
+		// 			function () {
+		// 				if (this.handleElementAccess('walletDeposit')) {
+		// 					conn.subscribe('new_deposits', function (topic, data) {
+		// 						window.handleReceivedNotification(true, data)
+		// 					})
+		// 				}
+		// 				if (this.handleElementAccess('walletWithdrawal')) {
+		// 					conn.subscribe('new_withdrawals', function (topic, data) {
+		// 						window.handleReceivedNotification(true, data)
+		// 					})
+		// 				}
+		// 				if (this.handleElementAccess('playerProfile')) {
+		// 					conn.subscribe('new_registrations', function (topic, data) {
+		// 						window.handleReceivedNotification(true, data)
+		// 					})
+		// 				}
+		// 			}.bind(this),
+		// 			function () {
+		// 				/* eslint-disable no-console */
+		// 				console.warn('WebSocket connection has been closed!')
+		// 			},
+		// 			{ 'skipSubprotocolCheck': true }
+		// 		)
+		// 	}
+		// }
 	}
 
 	getChildContext() {

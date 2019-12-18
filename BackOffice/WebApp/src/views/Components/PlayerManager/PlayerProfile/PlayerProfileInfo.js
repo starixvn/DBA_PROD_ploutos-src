@@ -37,7 +37,7 @@ class PlayerProfileInfo extends Component {
 		const paymentRiskLevelPath = '/setup/payment_risk_level/view/' + playerProfile.PaymentRiskLevelId
 		const betLimitLevelPath = '/setup/betlimitlevel/view/' + playerProfile.GameBetLimitLevelId
 		const securityPath = '/setup/question/view/' + playerProfile.SecurityQuestionId1
-		const currencyPath = '/setup/currency/view/' + playerProfile.CurrencyCode
+		const currencyPath = '/setup/currency/view/' + playerProfile.CurrencyId
 
 		return (
 			<Fragment>

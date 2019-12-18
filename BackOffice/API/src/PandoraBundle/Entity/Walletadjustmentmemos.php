@@ -545,7 +545,7 @@ class Walletadjustmentmemos extends AbstractEntity
     /**
      * Set Wallet
      *
-     * @param \AppBundle\Entity\Wallets $Wallet
+     * @param \PandoraBundle\Entity\Wallets $Wallet
      *
      * @return Walletadjustmentmemos
      */
@@ -559,7 +559,7 @@ class Walletadjustmentmemos extends AbstractEntity
     /**
      * Get Wallet
      *
-     * @return \AppBundle\Entity\Wallets
+     * @return \PandoraBundle\Entity\Wallets
      */
     public function getWallet()
     {

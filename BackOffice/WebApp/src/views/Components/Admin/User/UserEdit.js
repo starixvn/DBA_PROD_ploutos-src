@@ -41,7 +41,7 @@ const rawFields = [
 		'optionQueryKey': '',
 		'lookupUrl': '',
 		'lookupField': '',
-		'varType': 'ID!',
+		'varType': 'ID',
 		'onChangeFunc': '',
 		'isDisabled': 'this.props.userInfo.userRole !== "ROLE_ADMIN"'
 	},

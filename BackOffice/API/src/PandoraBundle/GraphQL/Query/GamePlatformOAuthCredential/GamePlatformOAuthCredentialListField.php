@@ -21,6 +21,10 @@ use PandoraBundle\GraphQL\Type\GamePlatformOAuthCredential\GamePlatformOAuthCred
 
 class GamePlatformOAuthCredentialListField extends AbstractContainerAwareField
 {
+    public function getDescription(){
+        return 'Game Platform OAuth Credential List';
+    }
+    
     public function build(FieldConfig $config)
     {
         $playerProfileFields = GamePlatformOAuthCredentialJoinery::fields();

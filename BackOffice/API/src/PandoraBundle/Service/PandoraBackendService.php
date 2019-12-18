@@ -59,10 +59,29 @@ class PandoraBackendService
         $apiResult = $this->consumeServerApi();
         if (isset($apiResult->Status) && !$apiResult->Status && $this->formatReturn && !is_null($info)) {
             // FORMAT RETURN INTO DIGESTABLE ARRAY FOR UI
+            $errors = [];
+            
             if(isset($apiResult->Messages->Errors) && count($apiResult->Messages->Errors) > 0){
                 foreach ($apiResult->Messages->Errors as $value){
-                    $info->getExecutionContext()->addError(new \Exception(json_encode([['field' => $value->Code, 'message' => $value->Description]])));
+                    $errors[] = ['field' => $value->Code, 'message' => $value->Description];
+                    // $info->getExecutionContext()->addError(new \Exception(json_encode([['field' => $value->Code, 'message' => $value->Description]])));
                 }
+            }
+            if(property_exists($apiResult, 'ModelState') && is_object($apiResult->ModelState)){
+                $arrayConverted = get_object_vars($apiResult->ModelState);
+                if(count($arrayConverted) > 0){
+                    foreach($arrayConverted as $key => $obj){
+                        $keyName = explode('.', $key);
+                        $errors[] = [
+                            'field' => $keyName[1],
+                            'message' => $obj[0]
+                        ];
+                    }
+                }
+            }
+            
+            if(count($errors) > 0){
+                $info->getExecutionContext()->addError(new \Exception(json_encode($errors)));
             }else{
                 $info->getExecutionContext()->addError(new \Exception(json_encode([['field' => 'AppLevel', 'message' => 'Unable to process you request. Please contact Administrator.']])));
             }

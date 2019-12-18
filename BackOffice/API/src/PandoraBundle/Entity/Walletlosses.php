@@ -711,7 +711,7 @@ class Walletlosses extends AbstractEntity
     /**
      * Set GamePlatform
      *
-     * @param \AppBundle\Entity\Gameplatforms $GamePlatform
+     * @param \PandoraBundle\Entity\Gameplatforms $GamePlatform
      *
      * @return Walletlosses
      */
@@ -725,7 +725,7 @@ class Walletlosses extends AbstractEntity
     /**
      * Get GamePlatform
      *
-     * @return \AppBundle\Entity\Gameplatforms
+     * @return \PandoraBundle\Entity\Gameplatforms
      */
     public function getGamePlatform()
     {
@@ -735,7 +735,7 @@ class Walletlosses extends AbstractEntity
     /**
      * Set GamePlatformProduct
      *
-     * @param \AppBundle\Entity\Gameplatformproducts $GamePlatformProduct
+     * @param \PandoraBundle\Entity\Gameplatformproducts $GamePlatformProduct
      *
      * @return Walletlosses
      */
@@ -749,7 +749,7 @@ class Walletlosses extends AbstractEntity
     /**
      * Get GamePlatformProduct
      *
-     * @return \AppBundle\Entity\Gameplatformproducts
+     * @return \PandoraBundle\Entity\Gameplatformproducts
      */
     public function getGamePlatformProduct()
     {

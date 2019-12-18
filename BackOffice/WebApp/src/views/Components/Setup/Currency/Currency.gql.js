@@ -49,8 +49,8 @@ export function getCurrency() {
 
 	return (
 		gql`
-            query QUERY_VIEW( $CurrencyCode: String! ){
-                ${detailSchemaKey} ( CurrencyCode: $CurrencyCode ){            
+            query QUERY_VIEW( $Id: ID! ){
+                ${detailSchemaKey} ( Id: $Id ){            
                     ${queryItems}
                 }
             }
