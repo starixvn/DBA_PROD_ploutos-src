@@ -399,6 +399,10 @@ class PlayerProfileJoinery{
                 'type' => new BooleanType(),
                 'joineryTerm' => 'b.IsMobileVerified'
             ],
+            'IsVerified' => [
+                'type' => new BooleanType(),
+                'joineryTerm' => 'b.IsVerified'
+            ],
             'IPAddress' => [
                 'type' => new StringType(),
                 'joineryTerm' => 'b.IPAddress'

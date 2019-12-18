@@ -64,6 +64,17 @@ class ActionCreatePlayerProfileMutationType extends AbstractContainerAwareField
             return ['apiResult' => ''];
         }
         
+        // OVERRIDE PLAYER TYPE CODE
+        if($args['PlayerTypeCode'] == 'HOUSE'){
+            $args['PlayerTypeCode'] = 'H';
+        }else if($args['PlayerTypeCode'] == 'TEST'){
+            $args['PlayerTypeCode'] = 'T';
+        }else if($args['PlayerTypeCode'] == 'SHOP'){
+            $args['PlayerTypeCode'] = 'S';
+        }else{
+            $args['PlayerTypeCode'] = 'R';
+        }
+        
         $args['IsCreatedByCS'] = true;
         $pandoraApi = $this->container->get(PandoraBackendService::class);
         $pandoraApi->setParameters('v1/Player/RegisterFromBackOffice', 'POST', $args);

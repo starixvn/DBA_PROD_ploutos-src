@@ -328,6 +328,7 @@ class PlayerProfile extends Component {
 		)}
 
 		// const tabIndex = JSON.parse(localStorage.getItem('tabs:main'))		
+		// console.log('argh');
 		return (
 			<DetailView 
 				displayTitle={`${displayTitle}: ${item[displayTitleField]}`}

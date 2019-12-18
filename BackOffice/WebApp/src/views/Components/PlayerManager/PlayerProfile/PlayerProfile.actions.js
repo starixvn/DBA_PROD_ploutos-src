@@ -10,7 +10,7 @@ export function actions(data, context) {
 			action: 'verify',
 			icon: 'gavel',
 			color: 'danger',
-			isVisible: ((data.AccountStatus ==='Locked' && data.IsEmailVerified === true) || (data.AccountStatus ==='Locked' && data.IsMobileVerified === true)) ? false : isActionVisibile('Created,Locked', 'verify', 'actionVerifyPlayerProfileMutation', data, context)
+			isVisible: isVerifyActionVisibile(data.IsEmailVerified, data.IsMobileVerified, data.IsVerified, 'verify', 'actionVerifyPlayerProfileMutation', data, context)
 		},
 		{
 			task: 'Activate',
@@ -32,7 +32,7 @@ export function actions(data, context) {
 			icon: 'edit',
 			color: 'warning',
 			linkTo: `/player_manager/profile/f/edit/${data.Id}`,
-			isVisible: (data.AccountStatus === 'Archived')? false : isActionVisibile('All', 'edit', 'actionEditPlayerProfileMutation', data, context)
+			isVisible: (data.AccountStatus === 'Archived') ? false : isActionVisibile('All', 'edit', 'actionEditPlayerProfileMutation', data, context)
 		},
 		{
 			tasks: [
@@ -40,7 +40,7 @@ export function actions(data, context) {
 					task: 'Verify',
 					action: 'verify',
 					icon: 'gavel',
-					isVisible: isActionVisibile('Created,Locked', 'verify', 'actionVerifyPlayerProfileMutation', data, context)
+					isVisible: isVerifyActionVisibile(data.IsEmailVerified, data.IsMobileVerified, data.IsVerified, 'verify', 'actionVerifyPlayerProfileMutation', data, context)
 				},
 				{
 					task: 'Lock',
@@ -470,12 +470,16 @@ export function renderModalContent(v) {
  * @returns {boolean} True / False
  */
 function isActionVisibile(a, b, c, d, e) {
-	// return (a.indexOf(d.Status) !== -1 || a.indexOf('All') !== -1) && e.handleElementAccess(b) && true
-
 	// HIDE / SHOW VERIFICATION ACTION
 	if (a == 'actionVerifyPlayerProfileMutation' && (d.PlayerRegisterStatus === 'Verified_by_Player' || d.PlayerRegisterStatus === 'Verified_by_CS')) return false
-	// return (a.indexOf(d.AccountStatus) !== -1 || a.indexOf('All') !== -1)
 	return (a.indexOf(d.AccountStatus) !== -1 || a.indexOf('All') !== -1) && e.handleElementAccess(c) && true
+}
+
+function isVerifyActionVisibile(emailVerified, mobileVerified, isVerified, c, d, e, f) {
+	if(emailVerified || mobileVerified || isVerified){
+		return false;
+	}
+	return f.handleElementAccess(d);
 }
 
 /**

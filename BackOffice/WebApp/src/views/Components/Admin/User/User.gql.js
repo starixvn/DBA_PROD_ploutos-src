@@ -13,7 +13,7 @@ const queryMeta = `
 	count: true,
 	paging: {
 		offset: 0,
-		limit: 10
+		limit: 100
 	}
 `
 const pagingInfo = `pagingInfo {
