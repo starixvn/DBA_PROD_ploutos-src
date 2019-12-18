@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -w "var/sessions" ] && [ -w "var/storage" ] && [ -w "var/logs" ];
+then
+  echo "WRITABLE";
+else
+  echo "/var/* folder in your root directory is not writable, please modify accordingly.";
+  exit 1;
+fi
+
+exit 1;

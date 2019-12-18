@@ -1,0 +1,35 @@
+parameters:
+    database_host: 172.16.10.233
+    database_port: null
+    database_name: bo_ploutus_api
+    database_user: ploutus_api
+    database_password: Pl0utusP@ssw0rd123$@
+    
+    database_host_pandora: 172.16.10.235
+    database_port_pandora: null
+    database_name_pandora: BlueberryDb
+    database_user_pandora: blueberry
+    database_password_pandora: P@ssw0rd123$@
+    
+    pandora_api_endpoint: 'http://stg-ploutus-api.globalcomrci.com'
+    pandora_api_token: 77215d6b-4d62-4a18-b1a6-922af7dee4ae-45d5d624-5c56-4579-816c-41fa5b34b5a8
+    affiliate_api_endpoint: 'http://stg-affiliate-api.globalcomrci.com'
+    affiliate_api_token: 77215d6b-4d62-4a18-b1a6-922af7dee4ae-45d5d624-5c56-4579-816c-41fa5b34b5a8
+    
+    secret: H0llyM0ll1St@g
+    
+    cms_management:
+        web:
+            index: web
+            title: Gaming Site
+            subdomain: '.globalcomrci.com'
+            endpoint: 'http://stg-web.globalcomrci.com'
+            username: cadmin
+            password: '^_69n1nj@**'
+        aff:
+            index: aff
+            title: Affiliate Website
+            subdomain: '.globalcomrci.com'
+            endpoint: 'http://stg-aff.globalcomrci.com'
+            username: cadmin
+            password: '^_69n1nj@**'

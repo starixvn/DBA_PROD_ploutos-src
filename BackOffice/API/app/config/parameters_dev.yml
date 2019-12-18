@@ -1,0 +1,45 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: dev_pandora_api_manager_db
+    database_user: root
+    database_password: rollbasector24
+    
+#    database_host_pandora: 127.0.0.1
+#    database_port_pandora: null
+#    database_name_pandora: dev_blueberry_pagcor_com_db
+#    database_user_pandora: root
+#    database_password_pandora: rollbasector24
+    
+    database_host_pandora: 216.250.102.218
+    database_port_pandora: 13306
+    database_name_pandora: BlueberryDb
+    database_user_pandora: blueberry
+    database_password_pandora: P@ssw0rd123$@
+    
+    pandora_api_endpoint: 'http://stg-ploutus-api.globalcomrci.com'
+    pandora_api_token: 77215d6b-4d62-4a18-b1a6-922af7dee4ae-45d5d624-5c56-4579-816c-41fa5b34b5a8
+    affiliate_api_endpoint: 'http://stg-affiliate-api.globalcomrci.com'
+    affiliate_api_token: 77215d6b-4d62-4a18-b1a6-922af7dee4ae-45d5d624-5c56-4579-816c-41fa5b34b5a8
+    
+    single_sign_on_token_generator: http://116.93.97.89:8080
+    single_sign_on_response_type: code
+    single_sign_on_client_secret: fdada63b-dca5-4724-ae45-a6d5cf90a849
+    single_sign_on_client_id: 119c568b-4223-4e4a-bfa8-27a0beef9257
+    pagcor_athena_portal: http://216.250.102.218:18086
+    
+    cms_management:
+        web:
+            index: web
+            title: Gaming Site
+            subdomain: '.globalcomrci.com'
+            endpoint: 'http://stg-web.globalcomrci.com'
+            username: cadmin
+            password: '^_69n1nj@**'
+        aff:
+            index: aff
+            title: Affiliate Website
+            subdomain: '.globalcomrci.com'
+            endpoint: 'http://stg-aff.globalcomrci.com'
+            username: cadmin
+            password: '^_69n1nj@**'

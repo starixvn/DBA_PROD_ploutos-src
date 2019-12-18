@@ -1,0 +1,48 @@
+parameters:
+  graphql_extensions.classes.path_generator: "Youshido\\GraphQLExtensionsBundle\\Service\\PathGenerator\\DatePathGenerator"
+  graphql_extensions.classes.path_resolver: "Youshido\\GraphQLExtensionsBundle\\Service\\PathResolver\\LocalPathResolver"
+  graphql_extensions.classes.file_provider: "Youshido\\GraphQLExtensionsBundle\\Service\\FileProvider"
+  graphql_extensions.classes.image_resizer: "Youshido\\GraphQLExtensionsBundle\\Service\\ImageResizer"
+  graphql_extensions.classes.locator: "Youshido\\GraphQLExtensionsBundle\\Service\\Locator\\Locator"
+
+
+services:
+  graphql_extensions.base_helper:
+    abstract: true
+    class: "Youshido\\GraphQLExtensionsBundle\\Helper\\BaseHelper"
+    calls:
+      - [ setInitialDependencies, ["@security.token_storage", "@security.authorization_checker", "@validator", "@logger", "@graphql_extensions.om"] ]
+
+  graphql_extensions.image_resizer:
+      class: "%graphql_extensions.classes.image_resizer%"
+      arguments:
+          - "@graphql_extensions.storage"
+          - "@graphql_extensions.path_resolver"
+          - "%graphql_extensions.config.image_driver%"
+
+  graphql_extensions.path_generator:
+    public: false
+    class: "%graphql_extensions.classes.path_generator%"
+
+  graphql_extensions.file_provider:
+    class: "%graphql_extensions.classes.file_provider%"
+    arguments:
+      - "@request_stack"
+      - "@graphql_extensions.locator"
+      - "@graphql_extensions.om"
+
+  graphql_extensions.locator:
+    class: "%graphql_extensions.classes.locator%"
+    arguments:
+      - "@graphql_extensions.path_generator"
+      - "@graphql_extensions.path_resolver"
+      - "@graphql_extensions.storage"
+
+  graphql_extensions.path_resolver:
+    class: "%graphql_extensions.classes.path_resolver%"
+    arguments:
+        - "@router"
+        - "%graphql_extensions.config.web_root%"
+        - "%graphql_extensions.config.path_prefix%"
+        - "%graphql_extensions.config.host%"
+        - "%graphql_extensions.config.scheme%"
